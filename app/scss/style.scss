@@ -3,6 +3,33 @@
 @import 'reset';
 @import 'global'; // глобальные стили
 
+.header{
+  padding: 45px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
+.menu{
+  &__list{
+    display: flex;
+  }
+  &__item:not(:last-child){
+    margin-right: 34px;
+  }
+}
+
+.user-bar{
+  display: flex;
+
+  &__link{
+
+
+
+    
+  }
+}
 
 @import 'media';  //медиазапросы        
