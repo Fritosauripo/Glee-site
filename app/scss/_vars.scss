@@ -1,8 +1,11 @@
-$prime: #fcd7b6;
-$subprime: #fef7f0;
-$title: #1a1a1a;
-$subtitle: #243f4d;
-$text: #4f6b77;
+$prime: #FCD7B6;
+$subprime: #FEF7F0;
+$accent: #A3BBC8;
+$pre-accent: #EDF1F4;
+
+$title: #1A1A1A;
+$subtitle: #243F4D;
+$text: #436372;
 
 %rubik-400 {
   font-family: 'Rubik-Regular', sans-serif;
@@ -10,6 +13,19 @@ $text: #4f6b77;
 }
 
 %rubik-500 {
-  ont-family: 'Rubik-Medium', sans-serif;
+  font-family: 'Rubik-Medium', sans-serif;
   font-weight: 500;
+}
+
+%dmsans-400{
+  font-family: 'DMSans-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%icon{
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
 }

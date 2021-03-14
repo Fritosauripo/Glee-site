@@ -1,35 +1,150 @@
-@import 'vars';   // переменные для цвета/шрифта и т.д
-@import 'fonts';  // подключение шрифтов
+@import 'vars'; // переменные для цвета/шрифта и т.д
+@import 'fonts'; // подключение шрифтов
 @import 'reset';
 @import 'global'; // глобальные стили
 
-.header{
-  padding: 45px 0;
-  &__inner{
+.header {
+  padding: 48px 0 45px;
+
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
 
-.menu{
-  &__list{
+.menu {
+  &__list {
     display: flex;
   }
-  &__item:not(:last-child){
+
+  &__item:not(:last-child) {
     margin-right: 34px;
   }
-}
 
-.user-bar{
-  display: flex;
-
-  &__link{
-
-
-
-    
+  &__link {
+    @extend %rubik-500;
+    color: $text;
+    font-size: 15px;
+    line-height: 1.3;
   }
 }
 
-@import 'media';  //медиазапросы        
+.user-bar {
+  display: flex;
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    &--search {
+      background-color: $pre-accent;
+      margin-right: 21px;
+    }
+
+    &--favorites {
+      padding: 0 43px;
+      background-color: $prime;
+      border-radius: 50px 0 0 50px;
+      border-right: 1px solid #fde7d3;
+    }
+
+    &--cart {
+      padding: 0 43px;
+      background-color: $prime;
+      border-radius: 0 50px 50px 0;
+      margin-right: 21px;
+    }
+
+    &--menu {
+      background-color: $accent;
+    }
+
+    &:before {
+      @extend %icon;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 18px;
+      height: 18px;
+    }
+
+    &--search::before {
+      background-image: url('../images/icons/search.svg');
+    }
+
+    &--favorites:before {
+      background-image: url('../images/icons/heart.svg');
+    }
+
+    &--cart:before {
+      background-image: url('../images/icons/cart.svg');
+    }
+
+    &--menu:before {
+      background-image: url('../images/icons/menu.svg');
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    @extend %dmsans-400;
+    font-size: 10px;
+    line-height: 1.6;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+  }
+}
+
+.product-ad {
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    display: block;
+    max-width: 406px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    @extend %rubik-500;
+    color: $subtitle;
+    font-size: 72px;
+  }
+
+  &__text p {
+    @extend %rubik-400;
+    color: $text;
+    font-size: 18px;
+    line-height: 2;
+  }
+
+  &__button {
+    position: relative;
+    padding: 25px 100px 21px 28px;
+    background-color: $accent;
+    @extend %rubik-500;
+    font-size: 15px;
+    color: #FFFFFF;
+  }
+
+  &__button::after {
+    background-image: url('../images/icons/arrow.svg');
+    @extend %icon;
+    width: 22px;
+    height: 9px;
+    top: 50%;
+    right: 17px;
+    transform: translateY(-50%);
+  }
+}
+
+@import 'media'; //медиазапросы        

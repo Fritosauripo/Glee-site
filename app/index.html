@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Glee</title>
+  <link rel="icon" href="images/favicon.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -53,18 +55,60 @@
         </nav>
 
         <div class="user-bar">
-          <a href="#" class="user-bar__link user-bar__link--search"></a>
+          <a href="#" class="user-bar__link user-bar__link--search">
+            <span class="visually-hidden">
+              Search
+            </span>
+          </a>
+
           <a href="#" class="user-bar__link user-bar__link--favorites">
-            <span>0</span>
+            <span class="visually-hidden">
+              Favorite
+            </span>
+            <span class="user-bar__num">0</span>
           </a>
+
           <a href="#" class="user-bar__link user-bar__link--cart">
-            <span>0</span>
+            <span class="visually-hidden">
+              Cart
+            </span>
+            <span class="user-bar__num">0</span>
           </a>
-          <a href="#" class="user-bar__link user-bar__link--menu"></a>
+
+          <a href="#" class="user-bar__link user-bar__link--menu">
+            <span class="visually-hidden">
+              Menu
+            </span>
+          </a>
         </div>
       </div>
     </div>
   </header>
+
+  <section class="product-ad">
+    <div class="container">
+      <div class="product-ad__inner">
+        <div class="product-ad__content" href="#">
+          <h2 class="product-ad__title">
+            Smart and trendy
+          </h2>
+
+          <div class="product-ad__text">
+            <p>
+              Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            </p>
+          </div>
+
+          <a class="product-ad__button" href="#" >
+            Shop now
+          </a>
+        </div>
+        <div class="product-ad__goods">
+          <img src="images/sofa.png" alt="white sofa">
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="js/main.min.js"></script>
 </body>
 
