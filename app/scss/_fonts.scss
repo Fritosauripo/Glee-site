@@ -27,3 +27,13 @@
     url('../fonts/DMSans-Regular.woff') format('woff');
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: local('DMSans-Bold'),
+    url('../fonts/DMSans-Bold.woff2') format('woff2'),
+    url('../fonts/DMSans-Bold.woff') format('woff');
+  font-display: swap;
+}

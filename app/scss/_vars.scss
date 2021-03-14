@@ -4,6 +4,7 @@ $accent: #A3BBC8;
 $pre-accent: #EDF1F4;
 
 $title: #1A1A1A;
+$span: #414141;
 $subtitle: #243F4D;
 $text: #436372;
 
@@ -17,12 +18,17 @@ $text: #436372;
   font-weight: 500;
 }
 
-%dmsans-400{
+%dmsans-400 {
   font-family: 'DMSans-Regular', sans-serif;
   font-weight: 400;
 }
 
-%icon{
+%dmsans-700 {
+  font-family: 'DMSans-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%icon {
   content: '';
   position: absolute;
   background-repeat: no-repeat;
