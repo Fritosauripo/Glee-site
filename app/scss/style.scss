@@ -307,21 +307,8 @@
   //   margin-right: 99px;
   // }
 
-  // &__logo {
-  //   display: block;
-  //   margin-bottom: 31px;
-  // }
 
-  // &__info {
-  //   font-style: normal;
-  //   @extend %rubik-400;
-  //   font-size: 14px;
-  //   line-height: 2;
-  // }
 
-  // &__info span {
-  //   text-transform: uppercase;
-  // }
 
   // &__menu {
   //   display: flex;
@@ -333,21 +320,9 @@
   //   width: 270px;
   // }
 
-  // &__title {
-  //   margin-bottom: 15px;
-  //   @extend %dmsans-700;
-  //   text-transform: uppercase;
-  //   font-size: 16px;
-  //   line-height: 1.3;
-  //   padding-top: 18px;
-  // }
 
-  // &__items {
-  //   font-size: 14px;
-  //   line-height: 2.3;
-  //   color: #7B7B7B;
-  //   @extend %rubik-400;
-  // }
+
+
 
   // &__text {
   //   margin-bottom: 38px;
@@ -360,39 +335,76 @@
   //   @extend %rubik-400;
   // }
 
-  // &__input {
-  //   padding: 10px 0;
-  //   border: 0;
-  //   border-radius: 0;
-  //   background-color: $subprime;
-  // }
 
-  // &__input::placeholder {
-  //   padding-left: 16px;
-  //   font-size: 12px;
-  // }
 
-  // &__button {
-  //   padding: 10px 25px;
-  //   text-align: center;
-  //   border: 0;
-  //   border-radius: 0;
-  //   margin-left: -5px;
-  //   background-color: $accent;
-  //   font-size: 14px;
-  // }
+
 }
 
 .footer-top {
   display: flex;
 
-  &__contact {}
+  &__item {
+    width: 270px;
+  }
 
-  &__services {}
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
 
-  &__account {}
+  &__logo {
+    display: block;
+    margin-bottom: 23px;
+  }
 
-  &__newsletter {}
+  &__info {
+    font-style: normal;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 2;
+  }
+
+  &__info span {
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 21px;
+    text-transform: uppercase;
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1.3;
+    padding-top: 18px;
+  }
+
+  &__items {
+    font-size: 14px;
+    line-height: 2.3;
+    color: #7B7B7B;
+    @extend %rubik-400;
+  }
+
+  &__input {
+    width: 160px;
+    padding: 10px 0;
+    border: 0;
+    border-radius: 0;
+    background-color: $subprime;
+  }
+
+  &__input::placeholder {
+    padding-left: 16px;
+    font-size: 12px;
+  }
+
+  &__button {
+    padding: 10px 25px;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+    margin-left: -5px;
+    background-color: $accent;
+    font-size: 14px;
+  }
 }
 
 .product-filter {
@@ -454,22 +466,22 @@
     background-color: #FFFFFF;
   }
 
-  &__card img{
+  &__card img {
     height: 200px;
     object-fit: none;
   }
 
-  &__card span{
+  &__card span {
     @extend %dmsans-500;
     color: $subtitle;
   }
 
-  &__price{
+  &__price {
     @extend %dmsans-700;
     color: $accent;
   }
 
-  &__price sup{
+  &__price sup {
     display: inline-block;
     transform: translateY(5px);
   }
