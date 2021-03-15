@@ -11,7 +11,19 @@
   overflow: hidden;
 }
 
-.container{
+.container {
   max-width: 1770px;
-  margin: 0 auto;       
+  margin: 0 auto;
+}
+
+.small-container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.title {
+  @extend %dmsans-700;
+  color: $title-main;
+  font-size: 38px;
+  line-height: 1.2;
 }
