@@ -1,7 +1,7 @@
 @import 'vars'; // переменные для цвета/шрифта и т.д
 @import 'fonts'; // подключение шрифтов
 @import 'reset';
-@import 'libs'; // библиоотеки
+@import 'libs'; // библиотеки
 @import 'global'; // глобальные стили
 
 .header {
@@ -80,7 +80,7 @@
       top: 9px;
       width: 1px;
       height: 33px;
-      background-color: #fde7d3;
+      background-color: #FDE7D3;
     }
 
     &--cart {
@@ -111,24 +111,22 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 18px;
-      height: 18px;
     }
 
     &--search::before {
-      background-image: url('../images/icons/search.svg');
+      @extend %search;
     }
 
     &--favorites:before {
-      background-image: url('../images/icons/heart.svg');
+      @extend %favorites;
     }
 
     &--cart:before {
-      background-image: url('../images/icons/cart.svg');
+      @extend %cart;
     }
 
     &--menu:before {
-      background-image: url('../images/icons/menu.svg');
+      @extend %menu;
     }
   }
 
@@ -159,10 +157,10 @@
     max-width: 431px;
     width: 100%;
     margin-right: 100px;
+    padding: 60px 0;
   }
 
   &__title {
-    margin-bottom: 46px;
     @extend %rubik-500;
     color: $subtitle;
     text-transform: uppercase;
@@ -171,7 +169,9 @@
   }
 
   &__text {
-    margin-bottom: 46px;
+    max-width: 356px;
+    margin-bottom: 74px;
+    padding: 20px 0;
   }
 
   &__text p {
@@ -271,7 +271,8 @@
 
 .product-info {
   &__list {
-    display: flex width: 100%;
+    display: flex;
+    width: 100%;
   }
 
   &__item {
@@ -376,6 +377,7 @@
   }
 
   &__card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -388,7 +390,69 @@
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     border-radius: 10px;
     background-color: #FFFFFF;
-    ////////////////////////////////////////////////////////////
+  }
+
+  &__bar {
+    position: absolute;
+    display: flex;
+    padding: 160px 50px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+
+    &--search {
+      background-color: #FEFEFE;
+      fill: $accent;
+    }
+
+    &--cart {
+      background-color: $accent;
+      fill: #FFFFFF;
+    }
+
+    &--favorites {
+      background-color: #FEFEFE;
+      fill: $accent;
+    }
+
+    &:before {
+      @extend %icon;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--search::before {
+      @extend %search;
+    }
+
+    &--cart:before {
+      @extend %cart;
+    }
+
+    &--favorites:before {
+      @extend %favorites;
+    }
+
+    &--menu:before {
+      @extend %menu;
+    }
+  }
+
+  &__link:not(:last-child){
+    margin-right: 16px;
+  }
+
+  &__bar:hover{
+    opacity: 1;
   }
 
   &__info {
@@ -424,15 +488,18 @@
 
 .footer {
   padding: 80px 0 0;
+  @extend %rubik-400;
+  color: #7B7B7B;
+  outline: transparent;
 }
 
 .footer-top {
   display: flex;
-  border-bottom: 1px solid #dae4e9;
+  padding-bottom: 66px;
+  border-bottom: 1px solid #DAE4E9;
 
   &__item {
     width: 270px;
-    color: #7B7B7B;
   }
 
   &__item:not(:last-child) {
@@ -446,11 +513,9 @@
 
   &__info {
     max-width: 192px;
-    @extend %rubik-400;
     font-style: normal;
     font-size: 14px;
     line-height: 2;
-
   }
 
   &__info span {
@@ -502,7 +567,6 @@
     width: 172px;
     padding: 7px 11px 9px 16px;
     @extend %dmsans-400;
-    outline: transparent;
     border: 0;
     border-radius: 0;
     background-color: $subprime;
@@ -520,7 +584,7 @@
 
   &__input::placeholder {
     font-size: 12px;
-    color:#234969 ;
+    color: #234969;
   }
 
   &__button {
@@ -531,7 +595,6 @@
     font-size: 14px;
     line-height: 1.5;
     color: #FFFFFF;
-    outline: transparent;
     cursor: pointer;
     border: 0;
     border-radius: 0;
@@ -550,7 +613,7 @@
 }
 
 .footer-bottom {
-  padding: 35px 0;
+  padding: 33px 0;
 
   &__inner {
     display: flex;
@@ -558,20 +621,40 @@
     align-items: center;
   }
 
+  &__text p {
+    font-size: 14px;
+  }
+
   &__menu {
     display: flex;
   }
 
   &__item {
-    padding: 0 13px;
+    padding: 0 12px;
   }
 
   &__item:not(:last-child) {
-    border-right: 1px solid black;
+    border-right: 1px solid #7B7B7B;
   }
 
   &__item:last-child {
     padding-right: 0;
+  }
+
+  &__link {
+    transition: color 0.3s ease;
+  }
+
+  &__link:hover {
+    color: $subtitle;
+  }
+
+  &__link:active {
+    color: #234969;
+  }
+
+  &__link:focus {
+    color: $prime;
   }
 }
 
