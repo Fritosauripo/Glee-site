@@ -1,273 +1,12 @@
-@import 'vars'; // переменные для цвета/шрифта и т.д
-@import 'fonts'; // подключение шрифтов
+@import 'vars';
+@import 'fonts';
 @import 'reset';
-@import 'libs'; // библиотеки
-@import 'global'; // глобальные стили
+@import 'libs';
+@import 'global';
+@import 'components/header';
+@import 'components/footer';
+@import 'index-page.scss';
 
-.header {
-  padding: 48px 0 45px;
-
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.menu {
-  &__list {
-    display: flex;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 34px;
-  }
-
-  &__link {
-    @extend %rubik-500;
-    color: $text;
-    font-size: 15px;
-    line-height: 1.3;
-    outline: transparent;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease;
-  }
-
-  &__link:hover,
-  &__link:focus,
-  &__link:active {
-    border-color: $text;
-  }
-}
-
-.user-bar {
-  display: flex;
-
-  &__link {
-    position: relative;
-    display: block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-
-    &--search {
-      background-color: $pre-accent;
-      margin-right: 21px;
-    }
-
-    &--search:hover,
-    &--search:focus,
-    &--search:active {
-      background-color: $prime;
-    }
-
-    &--favorites {
-      padding: 0 43px;
-      background-color: $prime;
-      border-radius: 50px 0 0 50px;
-    }
-
-    &--favorites:hover,
-    &--favorites:focus,
-    &--favorites:active {
-      background-color: $pre-accent;
-    }
-
-    &--favorites::after {
-      @extend %icon;
-      right: 0;
-      top: 9px;
-      width: 1px;
-      height: 33px;
-      background-color: #FDE7D3;
-    }
-
-    &--cart {
-      padding: 0 43px;
-      margin-right: 21px;
-      background-color: $prime;
-      border-radius: 0 50px 50px 0;
-    }
-
-    &--cart:hover,
-    &--cart:focus,
-    &--cart:active {
-      background-color: $pre-accent;
-    }
-
-    &--menu {
-      background-color: $accent;
-    }
-
-    &--menu:hover,
-    &--menu:focus,
-    &--menu:active {
-      background-color: $prime;
-    }
-
-    &:before {
-      @extend %icon;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    &--search::before {
-      @extend %search;
-    }
-
-    &--favorites:before {
-      @extend %favorites;
-    }
-
-    &--cart:before {
-      @extend %cart;
-    }
-
-    &--menu:before {
-      @extend %menu;
-    }
-  }
-
-  &__num {
-    position: absolute;
-    top: 10px;
-    width: 16px;
-    height: 16px;
-    @extend %dmsans-400;
-    font-size: 10px;
-    line-height: 1.6;
-    text-align: center;
-    border-radius: 50%;
-    background-color: #FFFFFF;
-  }
-}
-
-.product-ad {
-  &__inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 820px;
-    background-color: $prime;
-  }
-
-  &__content {
-    max-width: 431px;
-    width: 100%;
-    margin-right: 100px;
-    padding: 60px 0;
-  }
-
-  &__title {
-    @extend %rubik-500;
-    color: $subtitle;
-    text-transform: uppercase;
-    font-size: 72px;
-    line-height: 1;
-  }
-
-  &__text {
-    max-width: 356px;
-    margin-bottom: 74px;
-    padding: 20px 0;
-  }
-
-  &__text p {
-    @extend %rubik-400;
-    color: $text;
-    font-size: 18px;
-    line-height: 2;
-  }
-
-  &__button {
-    position: relative;
-    display: inline-block;
-    padding: 20px 104px 23px 29px;
-    @extend %rubik-500;
-    font-size: 15px;
-    outline: transparent;
-    color: #FFFFFF;
-    background-color: $accent;
-    transition: background-color 0.3s ease;
-  }
-
-  &__button:hover,
-  &__button:focus,
-  &__button:active {
-    background-color: $subtitle;
-  }
-
-  &__button::after {
-    background-image: url('../images/icons/arrow.svg');
-    @extend %icon;
-    top: 50%;
-    right: 17px;
-    transform: translateY(-50%);
-    width: 22px;
-    height: 9px;
-  }
-
-  &__goods {
-    position: relative;
-  }
-
-  &__goods img {
-    position: relative;
-    z-index: 1;
-  }
-
-  &__goods:after {
-    @extend %icon;
-    top: -178px;
-    right: -115px;
-    width: 634px;
-    height: 634px;
-    border-radius: 50%;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 1) 100%);
-    z-index: 0;
-  }
-}
-
-.slick-dots {
-  position: absolute;
-  bottom: 45px;
-  left: 50%;
-  display: flex;
-  transform: translateX(-50%);
-}
-
-.slick-dots li:not(:last-child) {
-  margin-right: 11px;
-}
-
-.slick-dots button {
-  width: 29px;
-  height: 29px;
-  font-size: 10px;
-  @extend %rubik-500;
-  outline: transparent;
-  cursor: pointer;
-  border: 0;
-  border-radius: 50%;
-  background-color: #FFFFFF9b;
-  transition: background-color 0.3s ease;
-}
-
-.slick-dots button:hover,
-.slick-dots button:active {
-  background-color: #FFFFFF;
-}
-
-.slick-dots button:focus {
-  background-color: $accent;
-}
-
-.slick-active button {
-  background-color: #FFFFFF;
-}
 
 .product-info {
   &__list {
@@ -281,51 +20,52 @@
     align-items: center;
     flex-direction: column;
     min-height: 170px;
+    // Попробовать при помощи отступов 
     padding: 47px 150px;
     background-color: $subprime;
-  }
 
-  &__item:not(:last-child) {
-    border-right: 1px solid #E8E4DF;
+    &:not(:last-child) {
+      border-right: 1px solid #E8E4DF;
+    }
+
+    span {
+      display: block;
+      @include dmsans(700);
+      font-size: 18px;
+      line-height: 2.2;
+      color: $span;
+    }
   }
 
   &__wrapper {
     position: relative;
     padding-left: 75px;
     max-width: 290px;
-  }
 
-  &__wrapper::before {
-    @extend %icon;
-    left: 0;
-    top: 50%;
-    transform: translateY(-70%);
-    width: 51px;
-    height: 54px;
-  }
+    &::before {
+      @extend %icon;
+      left: 0;
+      top: 50%;
+      transform: translateY(-70%);
+      width: 51px;
+      height: 54px;
+    }
 
-  &__wrapper--support::before {
-    background-image: url('../images/icons/support.svg');
-  }
+    &--support::before {
+      background-image: url('../images/icons/support.svg');
+    }
 
-  &__wrapper--delivery::before {
-    background-image: url('../images/icons/delivery.svg');
-  }
+    &--delivery::before {
+      background-image: url('../images/icons/delivery.svg');
+    }
 
-  &__wrapper--payment::before {
-    background-image: url('../images/icons/payment.svg');
-  }
-
-  &__item span {
-    display: block;
-    @extend %dmsans-700;
-    font-size: 18px;
-    line-height: 2.2;
-    color: $span;
+    &--payment::before {
+      background-image: url('../images/icons/payment.svg');
+    }
   }
 
   &__text {
-    @extend %dmsans-400;
+    @include dmsans(400);
     color: #585858;
     font-size: 16px;
     line-height: 1.2;
@@ -354,19 +94,19 @@
 
   &__button {
     background-color: transparent;
-    @extend %dmsans-700;
+    @include dmsans(700);
     color: #8B8B8B;
     font-size: 16px;
     outline: transparent;
     transition: color 0.3s ease;
 
     &:hover {
-      color: #000000;
+      color: $accent;
     }
 
     &:active,
     &:focus {
-      color: $accent;
+      color: #000000;
     }
   }
 
@@ -384,12 +124,19 @@
     align-items: center;
     text-align: center;
     width: 270px;
-    min-height: 380px;
+    height: 380px;
+    // органгизовать элементы через marign и padding
     margin-bottom: 40px;
     font-size: 16px;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     border-radius: 10px;
     background-color: #FFFFFF;
+
+    img {
+      height: 200px;
+      object-fit: none;
+      // ////////////////
+    }
   }
 
   &__bar {
@@ -398,6 +145,10 @@
     padding: 160px 50px;
     opacity: 0;
     transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   &__link {
@@ -408,21 +159,6 @@
     border-radius: 50%;
     transition: background-color 0.3s ease;
 
-    &--search {
-      background-color: #FEFEFE;
-      fill: $accent;
-    }
-
-    &--cart {
-      background-color: $accent;
-      fill: #FFFFFF;
-    }
-
-    &--favorites {
-      background-color: #FEFEFE;
-      fill: $accent;
-    }
-
     &:before {
       @extend %icon;
       top: 50%;
@@ -430,29 +166,36 @@
       transform: translate(-50%, -50%);
     }
 
-    &--search::before {
-      @extend %search;
+    &--search {
+      background-color: #FEFEFE;
+      fill: $accent;
+
+      &::before {
+        @extend %search;
+      }
     }
 
-    &--cart:before {
-      @extend %cart;
+    &--cart {
+      background-color: $accent;
+      fill: #FFFFFF;
+
+      &::before {
+        @extend %cart;
+      }
     }
 
-    &--favorites:before {
-      @extend %favorites;
+    &--favorites {
+      background-color: #FEFEFE;
+      fill: $accent;
+
+      &:before {
+        @extend %favorites;
+      }
     }
 
-    &--menu:before {
-      @extend %menu;
+    &:not(:last-child) {
+      margin-right: 16px;
     }
-  }
-
-  &__link:not(:last-child){
-    margin-right: 16px;
-  }
-
-  &__bar:hover{
-    opacity: 1;
   }
 
   &__info {
@@ -463,199 +206,19 @@
 
   &__name {
     padding: 36px 0 6px;
-  }
-
-  &__card img {
-    height: 200px;
-    object-fit: none;
-  }
-
-  &__name {
-    @extend %dmsans-500;
+    @include dmsans(500);
     color: $subtitle;
   }
 
   &__price {
-    @extend %dmsans-700;
+    @include dmsans(700);
     color: $accent;
-  }
 
-  &__price sup {
-    display: inline-block;
-    transform: translateY(5px);
-  }
-}
-
-.footer {
-  padding: 80px 0 0;
-  @extend %rubik-400;
-  color: #7B7B7B;
-  outline: transparent;
-}
-
-.footer-top {
-  display: flex;
-  padding-bottom: 66px;
-  border-bottom: 1px solid #DAE4E9;
-
-  &__item {
-    width: 270px;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
-
-  &__logo {
-    display: block;
-    margin-bottom: 22px;
-  }
-
-  &__info {
-    max-width: 192px;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 2;
-  }
-
-  &__info span {
-    text-transform: uppercase;
-  }
-
-  &__info a {
-    transition: color 0.3s ease;
-  }
-
-  &__info a:hover,
-  &__info a:focus,
-  &__info a:active {
-    color: $subtitle;
-  }
-
-  &__title {
-    margin-bottom: 13px;
-    padding-top: 18px;
-    @extend %dmsans-700;
-    text-transform: uppercase;
-    color: #1F2044;
-    font-size: 16px;
-    line-height: 1.3;
-  }
-
-  &__text p {
-    margin-bottom: 36px;
-    padding-top: 5px;
-    @extend %rubik-400;
-    line-height: 1.7;
-    font-size: 14px;
-  }
-
-  &__item a {
-    @extend %rubik-400;
-    font-size: 14px;
-    line-height: 2.3;
-    transition: color 0.3s ease;
-  }
-
-  &__items a:hover,
-  &__items a:focus,
-  &__items a:active {
-    color: $subtitle;
-  }
-
-  &__input {
-    width: 172px;
-    padding: 7px 11px 9px 16px;
-    @extend %dmsans-400;
-    border: 0;
-    border-radius: 0;
-    background-color: $subprime;
-    transition: background-color 0.3s ease;
-  }
-
-  &__input:hover {
-    background-color: $prime;
-  }
-
-  &__input:focus,
-  &__input:active {
-    background-color: $pre-accent;
-  }
-
-  &__input::placeholder {
-    font-size: 12px;
-    color: #234969;
-  }
-
-  &__button {
-    padding: 8px 17px;
-    margin-left: -6px;
-    text-align: center;
-    @extend %dmsans-400;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #FFFFFF;
-    cursor: pointer;
-    border: 0;
-    border-radius: 0;
-    background-color: $accent;
-    transition: background-color 0.3s ease;
-  }
-
-  &__button:hover {
-    background-color: $text;
-  }
-
-  &__button:focus,
-  &__button:active {
-    background-color: $subtitle;
+    sup {
+      display: inline-block;
+      vertical-align: inherit;
+      // /////////
+    }
   }
 }
 
-.footer-bottom {
-  padding: 33px 0;
-
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__text p {
-    font-size: 14px;
-  }
-
-  &__menu {
-    display: flex;
-  }
-
-  &__item {
-    padding: 0 12px;
-  }
-
-  &__item:not(:last-child) {
-    border-right: 1px solid #7B7B7B;
-  }
-
-  &__item:last-child {
-    padding-right: 0;
-  }
-
-  &__link {
-    transition: color 0.3s ease;
-  }
-
-  &__link:hover {
-    color: $subtitle;
-  }
-
-  &__link:active {
-    color: #234969;
-  }
-
-  &__link:focus {
-    color: $prime;
-  }
-}
-
-@import 'media'; //медиазапросы        

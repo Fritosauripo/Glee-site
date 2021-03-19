@@ -49,9 +49,12 @@ select {
   font: inherit;
 }
 
-button{
+button,
+input{
   border: 0;
   border-radius: 0;
+  outline: none;
+  cursor: pointer;
 }
 
 a {

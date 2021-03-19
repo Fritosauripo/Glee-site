@@ -10,31 +10,15 @@ $subtitle: #243F4D;
 $text: #436372;
 
 
-%rubik-400 {
-  font-family: 'Rubik-Regular', sans-serif;
-  font-weight: 400;
+@mixin rubik($weight) {
+  font-family: 'Rubik', sans-serif;
+  font-weight: $weight;
 }
 
-%rubik-500 {
-  font-family: 'Rubik-Medium', sans-serif;
-  font-weight: 500;
+@mixin dmsans($weight) {
+  font-family: 'DMSans', sans-serif;
+  font-weight: $weight;
 }
-
-%dmsans-400 {
-  font-family: 'DMSans-Regular', sans-serif;
-  font-weight: 400;
-}
-
-%dmsans-500 {
-  font-family: 'DMSans-Medium', sans-serif;
-  font-weight: 500;
-}
-
-%dmsans-700 {
-  font-family: 'DMSans-Bold', sans-serif;
-  font-weight: 700;
-}
-
 
 %icon {
   content: '';

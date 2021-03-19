@@ -1,0 +1,64 @@
+.product-info {
+    &__list {
+        display: flex;
+        width: 100%;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 170px;
+        // Попробовать при помощи отступов 
+        padding: 47px 150px;
+        background-color: $subprime;
+
+        &:not(:last-child) {
+            border-right: 1px solid #E8E4DF;
+        }
+
+        span {
+            display: block;
+            @include dmsans(700);
+            font-size: 18px;
+            line-height: 2.2;
+            color: $span;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        padding-left: 75px;
+        max-width: 290px;
+
+        &::before {
+            @extend %icon;
+            left: 0;
+            top: 50%;
+            transform: translateY(-70%);
+            width: 51px;
+            height: 54px;
+        }
+
+        &--support::before {
+            background-image: url('../images/icons/support.svg');
+        }
+
+        &--delivery::before {
+            background-image: url('../images/icons/delivery.svg');
+        }
+
+        &--payment::before {
+            background-image: url('../images/icons/payment.svg');
+        }
+    }
+
+    &__text {
+        @include dmsans(400);
+        color: #585858;
+        font-size: 16px;
+        line-height: 1.2;
+    }
+
+}
