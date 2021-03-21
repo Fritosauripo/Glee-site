@@ -4,7 +4,7 @@ $(function(){
     dots: true,
   });
 
-  var mixer = mixitup('.product-filter__content', {
+  var mixer = mixitup('.filter__content', {
 
     "animation": {
       "duration": 250,

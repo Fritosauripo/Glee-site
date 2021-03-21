@@ -53,27 +53,27 @@
         </ul>
 
         <div class="user-bar">
-          <button class="user-bar__link user-bar__link--search" type="button">
+          <button class="icon icon--search icon--gray" type="button">
             <span class="visually-hidden">
               Search
             </span>
           </button>
 
-          <button class="user-bar__link user-bar__link--favorites" type="button">
+          <button class="icon icon--favorites icon--orange" type="button">
             <span class="visually-hidden">
               Favorite
             </span>
             <span class="user-bar__num">0</span>
           </button>
 
-          <button class="user-bar__link user-bar__link--cart" type="button">
+          <button class="icon icon--cart icon--orange" type="button">
             <span class="visually-hidden">
               Cart
             </span>
             <span class="user-bar__num">0</span>
           </button>
 
-          <button class="user-bar__link user-bar__link--menu" type="button">
+          <button class="icon icon--menu icon--blue" type="button">
             <span class="visually-hidden">
               Menu
             </span>
@@ -106,7 +106,7 @@
                     Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                   </p>
                 </div>
-                <a class="product-ad__button" href="#">
+                <a class="btn product-ad__button" href="#">
                   Shop now
                 </a>
               </div>
@@ -213,314 +213,324 @@
       </div>
     </section>
 
-    <section class="product-filter">
-      <div class="small-container">
-        <h2 class="title product-filter__title">
+    <article class="week-products filter">
+
+      <div class="container container--small">
+        <h2 class="title filter__title">
           Product of the week
         </h2>
 
-        <ul class="product-filter__list">
-          <li class="product-filter__item">
-            <button class="product-filter__button" type="button" data-filter="all">
+        <ul class="filter__list">
+          <li class="filter__item">
+            <button class="filter__button" type="button" data-filter="all">
               All
             </button>
           </li>
-          <li class="product-filter__item">
-            <button class="product-filter__button" type="button" data-filter=".category-furnitures">
+          <li class="filter__item">
+            <button class="filter__button" type="button" data-filter=".category-furnitures">
               Furnitures
             </button>
           </li>
-          <li class="product-filter__item">
-            <button class="product-filter__button" type="button" data-filter=".category-chairs">
+          <li class="filter__item">
+            <button class="filter__button" type="button" data-filter=".category-chairs">
               Chairs
             </button>
           </li>
-          <li class="product-filter__item">
-            <button class="product-filter__button" type="button" data-filter=".category-lighting">
+          <li class="filter__item">
+            <button class="filter__button" type="button" data-filter=".category-lighting">
               Lighting
             </button>
           </li>
-          <li class="product-filter__item">
-            <button class="product-filter__button" type="button" data-filter=".category-decor">
+          <li class="filter__item">
+            <button class="filter__button" type="button" data-filter=".category-decor">
               Decor
             </button>
           </li>
         </ul>
 
-        <ul class="product-filter__content">
-          <li class="product-filter__card mix category-furnitures">
-            <div>
+        <ul class="filter__content filter__content--bottom">
+
+          <li class="card card--white mix category-furnitures">
+            <div class="card__img card__img--small">
               <img src="images/top-filter/1.png" alt="Wooden radio">
             </div>
-            <div class="product-filter__info">
-              <span class="product-filter__name">
+
+            <div class="card__info card__info--white">
+              <span class="card__name card__name--white">
                 Wooden radio
               </span>
 
-              <span class="product-filter__price">
+              <span class="card__price">
                 <sup>$</sup>
                 29.00
               </span>
             </div>
-            <div class="product-filter__bar">
-              <a href="#" class="product-filter__link product-filter__link--search">
+            <div class="filter__bar">
+              <a href="#" class="icon icon--search">
                 <span class="visually-hidden">
                   Search
                 </span>
               </a>
 
-              <button class="product-filter__link product-filter__link--cart" type="button">
+              <button class="icon icon--cart" type="button">
                 <span class="visually-hidden">
                   Cart
                 </span>
               </button>
 
-              <button class="product-filter__link product-filter__link--favorites" type="button">
+              <button class="icon icon--favorites" type="button">
                 <span class="visually-hidden">
                   Favorite
                 </span>
               </button>
             </div>
           </li>
-          <li class="product-filter__card mix category-chairs">
-            <div>
-              <img src="images/top-filter/2.png" alt="Wooden chair">
-            </div>
-            <div class="product-filter__info">
-              <span class="product-filter__name">
-                Wooden chair
-              </span>
 
-              <span class="product-filter__price">
-                <sup>$</sup>
-                29.00
-              </span>
+          <li class="card card--white mix category-furnitures">
+            <div class="card__img card__img--small">
+              <img src="images/top-filter/1.png" alt="Wooden radio">
             </div>
 
-            <div class="product-filter__bar">
-              <a href="#" class="product-filter__link product-filter__link--search">
-                <span class="visually-hidden">
-                  Search
-                </span>
-              </a>
-
-              <button class="product-filter__link product-filter__link--cart" type="button">
-                <span class="visually-hidden">
-                  Cart
-                </span>
-              </button>
-
-              <button class="product-filter__link product-filter__link--favorites" type="button">
-                <span class="visually-hidden">
-                  Favorite
-                </span>
-              </button>
-            </div>
-          </li>
-          <li class="product-filter__card mix category-chairs">
-            <div>
-              <img src="images/top-filter/3.png" alt="White chair">
-            </div>
-            <div class="product-filter__info">
-              <span class="product-filter__name">
-                White chair
-              </span>
-
-              <span class="product-filter__price">
-                <sup>$</sup>
-                29.00
-              </span>
-            </div>
-
-            <div class="product-filter__bar">
-              <a href="#" class="product-filter__link product-filter__link--search">
-                <span class="visually-hidden">
-                  Search
-                </span>
-              </a>
-
-              <button class="product-filter__link product-filter__link--cart" type="button">
-                <span class="visually-hidden">
-                  Cart
-                </span>
-              </button>
-
-              <button class="product-filter__link product-filter__link--favorites" type="button">
-                <span class="visually-hidden">
-                  Favorite
-                </span>
-              </button>
-            </div>
-          </li>
-          <li class="product-filter__card mix category-furnitures">
-            <div>
-              <img src="images/top-filter/4.png" alt="Retro table">
-            </div>
-            <div class="product-filter__info">
-              <span class="product-filter__name">
-                Retro table
-              </span>
-
-              <span class="product-filter__price">
-                <sup>$</sup>
-                29.00
-              </span>
-            </div>
-
-            <div class="product-filter__bar">
-              <a href="#" class="product-filter__link product-filter__link--search">
-                <span class="visually-hidden">
-                  Search
-                </span>
-              </a>
-
-              <button class="product-filter__link product-filter__link--cart" type="button">
-                <span class="visually-hidden">
-                  Cart
-                </span>
-              </button>
-
-              <button class="product-filter__link product-filter__link--favorites" type="button">
-                <span class="visually-hidden">
-                  Favorite
-                </span>
-              </button>
-            </div>
-          </li>
-          <li class="product-filter__card mix category-furnitures">
-            <div>
-              <img src="images/top-filter/5.png" alt="Wooden radio">
-            </div>
-            <div class="product-filter__info">
-              <span class="product-filter__name">
+            <div class="card__info card__info--white">
+              <span class="card__name card__name--white">
                 Wooden radio
               </span>
 
-              <span class="product-filter__price">
+              <span class="card__price">
                 <sup>$</sup>
                 29.00
               </span>
             </div>
-
-            <div class="product-filter__bar">
-              <a href="#" class="product-filter__link product-filter__link--search">
+            <div class="filter__bar">
+              <a href="#" class="icon icon--search">
                 <span class="visually-hidden">
                   Search
                 </span>
               </a>
 
-              <button class="product-filter__link product-filter__link--cart" type="button">
+              <button class="icon icon--cart" type="button">
                 <span class="visually-hidden">
                   Cart
                 </span>
               </button>
 
-              <button class="product-filter__link product-filter__link--favorites" type="button">
+              <button class="icon icon--favorites" type="button">
                 <span class="visually-hidden">
                   Favorite
                 </span>
               </button>
             </div>
           </li>
-          <li class="product-filter__card mix category-chairs">
-            <div>
-              <img src="images/top-filter/6.png" alt="Wooden chair">
+
+          <li class="card card--white mix category-furnitures">
+            <div class="card__img card__img--small">
+              <img src="images/top-filter/1.png" alt="Wooden radio">
             </div>
-            <div class="product-filter__info">
-              <span class="product-filter__name">
-                Wooden chair
+
+            <div class="card__info card__info--white">
+              <span class="card__name card__name--white">
+                Wooden radio
               </span>
 
-              <span class="product-filter__price">
+              <span class="card__price">
                 <sup>$</sup>
                 29.00
               </span>
             </div>
-
-            <div class="product-filter__bar">
-              <a href="#" class="product-filter__link product-filter__link--search">
+            <div class="filter__bar">
+              <a href="#" class="icon icon--search">
                 <span class="visually-hidden">
                   Search
                 </span>
               </a>
 
-              <button class="product-filter__link product-filter__link--cart" type="button">
+              <button class="icon icon--cart" type="button">
                 <span class="visually-hidden">
                   Cart
                 </span>
               </button>
 
-              <button class="product-filter__link product-filter__link--favorites" type="button">
+              <button class="icon icon--favorites" type="button">
                 <span class="visually-hidden">
                   Favorite
                 </span>
               </button>
             </div>
           </li>
-          <li class="product-filter__card mix category-chairs">
-            <div>
-              <img src="images/top-filter/7.png" alt="White chair">
+
+          <li class="card card--white mix category-furnitures">
+            <div class="card__img card__img--small">
+              <img src="images/top-filter/1.png" alt="Wooden radio">
             </div>
-            <div class="product-filter__info">
-              <span class="product-filter__name">
-                White chair
+
+            <div class="card__info card__info--white">
+              <span class="card__name card__name--white">
+                Wooden radio
               </span>
 
-              <span class="product-filter__price">
+              <span class="card__price">
                 <sup>$</sup>
                 29.00
               </span>
             </div>
-
-            <div class="product-filter__bar">
-              <a href="#" class="product-filter__link product-filter__link--search">
+            <div class="filter__bar">
+              <a href="#" class="icon icon--search">
                 <span class="visually-hidden">
                   Search
                 </span>
               </a>
 
-              <button class="product-filter__link product-filter__link--cart" type="button">
+              <button class="icon icon--cart" type="button">
                 <span class="visually-hidden">
                   Cart
                 </span>
               </button>
 
-              <button class="product-filter__link product-filter__link--favorites" type="button">
+              <button class="icon icon--favorites" type="button">
                 <span class="visually-hidden">
                   Favorite
                 </span>
               </button>
             </div>
           </li>
-          <li class="product-filter__card mix category-chairs">
-            <div>
-              <img src="images/top-filter/8.png" alt="Retro table">
+
+          <li class="card card--white mix category-furnitures">
+            <div class="card__img card__img--small">
+              <img src="images/top-filter/1.png" alt="Wooden radio">
             </div>
-            <div class="product-filter__info">
-              <span class="product-filter__name">
-                Retro table
+
+            <div class="card__info card__info--white">
+              <span class="card__name card__name--white">
+                Wooden radio
               </span>
 
-              <span class="product-filter__price">
+              <span class="card__price">
                 <sup>$</sup>
                 29.00
               </span>
             </div>
-
-            <div class="product-filter__bar">
-              <a href="#" class="product-filter__link product-filter__link--search">
+            <div class="filter__bar">
+              <a href="#" class="icon icon--search">
                 <span class="visually-hidden">
                   Search
                 </span>
               </a>
 
-              <button class="product-filter__link product-filter__link--cart" type="button">
+              <button class="icon icon--cart" type="button">
                 <span class="visually-hidden">
                   Cart
                 </span>
               </button>
 
-              <button class="product-filter__link product-filter__link--favorites" type="button">
+              <button class="icon icon--favorites" type="button">
+                <span class="visually-hidden">
+                  Favorite
+                </span>
+              </button>
+            </div>
+          </li>
+
+          <li class="card card--white mix category-furnitures">
+            <div class="card__img card__img--small">
+              <img src="images/top-filter/1.png" alt="Wooden radio">
+            </div>
+
+            <div class="card__info card__info--white">
+              <span class="card__name card__name--white">
+                Wooden radio
+              </span>
+
+              <span class="card__price">
+                <sup>$</sup>
+                29.00
+              </span>
+            </div>
+            <div class="filter__bar">
+              <a href="#" class="icon icon--search">
+                <span class="visually-hidden">
+                  Search
+                </span>
+              </a>
+
+              <button class="icon icon--cart" type="button">
+                <span class="visually-hidden">
+                  Cart
+                </span>
+              </button>
+
+              <button class="icon icon--favorites" type="button">
+                <span class="visually-hidden">
+                  Favorite
+                </span>
+              </button>
+            </div>
+          </li>
+
+          <li class="card card--white mix category-chairs">
+            <div class="card__img card__img--small">
+              <img src="images/top-filter/1.png" alt="Wooden radio">
+            </div>
+
+            <div class="card__info card__info--white">
+              <span class="card__name card__name--white">
+                Wooden radio
+              </span>
+
+              <span class="card__price">
+                <sup>$</sup>
+                29.00
+              </span>
+            </div>
+            <div class="filter__bar">
+              <a href="#" class="icon icon--search">
+                <span class="visually-hidden">
+                  Search
+                </span>
+              </a>
+
+              <button class="icon icon--cart" type="button">
+                <span class="visually-hidden">
+                  Cart
+                </span>
+              </button>
+
+              <button class="icon icon--favorites" type="button">
+                <span class="visually-hidden">
+                  Favorite
+                </span>
+              </button>
+            </div>
+          </li>
+
+          <li class="card card--white mix category-furnitures">
+            <div class="card__img card__img--small">
+              <img src="images/top-filter/1.png" alt="Wooden radio">
+            </div>
+
+            <div class="card__info card__info--white">
+              <span class="card__name card__name--white">
+                Wooden radio
+              </span>
+
+              <span class="card__price">
+                <sup>$</sup>
+                29.00
+              </span>
+            </div>
+            <div class="filter__bar">
+              <a href="#" class="icon icon--search">
+                <span class="visually-hidden">
+                  Search
+                </span>
+              </a>
+
+              <button class="icon icon--cart" type="button">
+                <span class="visually-hidden">
+                  Cart
+                </span>
+              </button>
+
+              <button class="icon icon--favorites" type="button">
                 <span class="visually-hidden">
                   Favorite
                 </span>
@@ -529,10 +539,179 @@
           </li>
         </ul>
       </div>
-    </section>
+
+      <div class="container">
+        <ul class="filter__content">
+
+          <li class="card card--orange mix category-lighting">
+            <div class="card__img card__img--large">
+              <img src="images/top-filter/9.png" alt="Mirum Notare Tellus">
+            </div>
+
+            <div class="card__info card__info--orange">
+              <span class="card__name card__name--orange">
+                Mirum Notare Tellus
+              </span>
+
+              <div class="card__description card__description--orange">
+                <p>
+                  LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
+                </p>
+              </div>
+
+              <button class="btn card__btn">
+                View More
+              </button>
+            </div>
+          </li>
+
+          <li class="card card--orange mix category-lighting">
+            <div class="card__img card__img--large">
+              <img src="images/top-filter/10.png" alt="">
+            </div>
+
+            <div class="card__info card__info--orange">
+              <span class="card__name card__name--orange">
+                Mirum Notare Tellus
+              </span>
+
+              <div class="card__description card__description--orange">
+                <p>
+                  LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
+                </p>
+              </div>
+
+              <button class="btn card__btn">
+                View More
+              </button>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </article>
+
+    <article class="new-design filter">
+      <div class="container container--small">
+        <h2 class="title filter__title">
+          New Design
+        </h2>
+
+        <ul class="filter__list">
+          <li class="filter__item">
+            <button class="filter__button" type="button" data-filter="all">
+              All
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__button" type="button" data-filter=".category-furnitures">
+              Furnitures
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__button" type="button" data-filter=".category-chairs">
+              Chairs
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__button" type="button" data-filter=".category-lighting">
+              Lighting
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__button" type="button" data-filter=".category-decor">
+              Decor
+            </button>
+          </li>
+        </ul>
+        
+        <ul class="filter__content">
+          <li class="card card--gray">
+            <div class="card__info--gray">
+              <span class="card__name card__name--gray">
+                Lorem, ipsum.
+              </span>
+              <span class="card__description card__description--gray">
+                Classic
+              </span>
+            </div>
+            <div class="card__img--gray">
+              <img src="images/new-design/1.png" alt="furnitures">
+            </div>
+          </li>
+          <li class="card card--gray">
+            <div class="card__info--gray">
+              <span class="card__name card__name--gray">
+                Lorem, ipsum.
+              </span>
+              <span class="card__description card__description--gray">
+                Classic
+              </span>
+            </div>
+            <div class="card__img--gray">
+              <img src="images/new-design/2.png" alt="furnitures">
+            </div>
+          </li>
+          <li class="card card--gray">
+            <div class="card__info--gray">
+              <span class="card__name card__name--gray">
+                Lorem, ipsum.
+              </span>
+              <span class="card__description card__description--gray">
+                Classic
+              </span>
+            </div>
+            <div class="card__img--gray">
+              <img src="images/new-design/3.png" alt="furnitures">
+            </div>
+          </li>
+          <li class="card card--gray">
+            <div class="card__info--gray">
+              <span class="card__name card__name--gray">
+                Lorem, ipsum. 123123 1231231 
+              </span>
+              <span class="card__description card__description--gray">
+                Classic
+              </span>
+            </div>
+            <div class="card__img--gray">
+              <img src="images/new-design/4.png" alt="furnitures">
+            </div>
+          </li>
+          <li class="card card--gray">
+            <div class="card__info--gray">
+              <span class="card__name card__name--gray">
+                Lorem, ipsum.
+              </span>
+              <span class="card__description card__description--gray">
+                Classic
+              </span>
+            </div>
+            <div class="card__img--gray">
+              <img src="images/new-design/5.png" alt="furnitures">
+            </div>
+          </li>
+          <li class="card card--gray">
+            <div class="card__info--gray">
+              <span class="card__name card__name--gray">
+                Lorem, ipsum.
+              </span>
+              <span class="card__description card__description--gray">
+                Classic
+              </span>
+            </div>
+            <div class="card__img--gray">
+              <img src="images/new-design/6.png" alt="furnitures">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </article>
   </main>
+
   <footer class="footer">
-    <div class="small-container">
+    <div class="container container--small">
       <div class="footer__top">
 
         <div class="footer__item">

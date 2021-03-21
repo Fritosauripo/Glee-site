@@ -35,33 +35,10 @@
         line-height: 2;
     }
 
-    &__button {
-        position: relative;
-        display: inline-block;
+    &__button{
         padding: 20px 104px 23px 29px;
-        @include rubik(500);
-        font-size: 15px;
-        outline: transparent;
         color: #FFFFFF;
         background-color: $accent;
-        transition: background-color 0.3s ease;
-        // ВЫНЕСТИ ОТДЕЛЬНО
-
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: $subtitle;
-        }
-
-        &::after {
-            background-image: url('../images/icons/arrow.svg');
-            @extend %icon;
-            top: 50%;
-            right: 17px;
-            transform: translateY(-50%);
-            width: 22px;
-            height: 9px;
-        }
     }
 
 
@@ -69,7 +46,7 @@
         position: relative;
 
         &::after {
-            @extend %icon;
+            // @extend %icon;
             top: -178px;
             right: -115px;
             width: 634px;

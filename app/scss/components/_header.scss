@@ -39,29 +39,21 @@
     display: flex;
 
     &__link {
-        position: relative;
-        display: block;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        transition: background-color 0.3s ease;
-
-        &:before {
-            @extend %icon;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
         &--search {
             background-color: $pre-accent;
             margin-right: 21px;
 
-            &:hover,
-            &:focus,
-            &:active {
-                background-color: $prime;
-            }
+            // &:hover {
+            //     background-color: $pre-accent;
+            // }
+
+            // &:focus {
+            //     background-color: #BFB6FC;
+            // }
+
+            // &:active {
+            //     background-color: #bbbbbb;
+            // }
         }
 
         &--favorites {
@@ -69,19 +61,16 @@
             background-color: $prime;
             border-radius: 50px 0 0 50px;
 
-            &:hover,
-            &:focus,
-            &:active {
+            &:hover {
                 background-color: $pre-accent;
             }
 
-            &::after {
-                @extend %icon;
-                right: 0;
-                top: 9px;
-                width: 1px;
-                height: 33px;
-                background-color: #FDE7D3;
+            &:focus {
+                background-color: #BFB6FC;
+            }
+
+            &:active {
+                background-color: #bbbbbb;
             }
         }
 
@@ -91,37 +80,33 @@
             background-color: $prime;
             border-radius: 0 50px 50px 0;
 
-            &:hover,
-            &:focus,
-            &:active {
+            &:hover {
                 background-color: $pre-accent;
+            }
+
+            &:focus {
+                background-color: #BFB6FC;
+            }
+
+            &:active {
+                background-color: #bbbbbb;
             }
         }
 
         &--menu {
             background-color: $accent;
 
-            &:hover,
-            &:focus,
-            &:active {
-                background-color: $prime;
+            &:hover {
+                background-color: $pre-accent;
             }
-        }
 
-        &--search::before {
-            @extend %search;
-        }
+            &:focus {
+                background-color: #BFB6FC;
+            }
 
-        &--favorites:before {
-            @extend %favorites;
-        }
-
-        &--cart:before {
-            @extend %cart;
-        }
-
-        &--menu:before {
-            @extend %menu;
+            &:active {
+                background-color: #bbbbbb;
+            }
         }
     }
 
