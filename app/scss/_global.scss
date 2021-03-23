@@ -119,9 +119,7 @@ body {
   &::after {
     content: '';
     position: absolute;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    @extend %background;
     background-image: url('../images/icons/arrow.svg');
     top: 50%;
     right: 17px;
@@ -229,15 +227,13 @@ body {
     margin-bottom: 34px;
   }
 
-
   &__img {
 
-    ///ИЗОБРАЖЕНИЯ ТАКЖЕ ПОДЕЛИТЬ НА white orange и gray
-    &--small {
+    &--white {
       height: 200px;
     }
 
-    &--large {
+    &--orange {
       display: block;
       height: 420px;
 
@@ -248,7 +244,7 @@ body {
       }
     }
 
-    &--gray{
+    &--gray {
       position: absolute;
       right: -39px;
       top: 50%;

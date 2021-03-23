@@ -1,0 +1,18 @@
+.product-video {
+    position: relative;
+    background-position: center 79%;
+    min-height: 500px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../../images/product-video/play-btn.svg');
+        @extend %background;
+        cursor: pointer;
+        width: 127px;
+        height: 127px;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+}

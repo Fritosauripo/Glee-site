@@ -35,9 +35,7 @@
         &::before {
             content: '';
             position: absolute;
-            background-position: center center;
-            background-size: cover;
-            background-repeat: no-repeat;
+            @extend %background;
             left: 0;
             top: 50%;
             transform: translateY(-70%);

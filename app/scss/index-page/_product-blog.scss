@@ -1,0 +1,16 @@
+.product-blog{
+    &__link{
+        position: relative;
+        font-size: 16px;
+        @include dmsans(700);
+        padding-right: 25px;
+
+        &::after{
+            content: '>';
+            position: absolute;
+            right: 0;
+            font-size: 16px;
+            color: #000000;
+        }
+    }
+}
