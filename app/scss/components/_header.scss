@@ -1,5 +1,11 @@
 .header {
+    position: fixed;
+    width: 100%;
     padding: 48px 0 45px;
+    background-color: #ffffff;
+    box-shadow: transparent;
+    transition: box-shadow 0.3s ease;
+    z-index: 1;
 }
 
 .menu {
@@ -38,77 +44,45 @@
 .user-bar {
     display: flex;
 
-    &__link {
-        &--search {
-            background-color: $pre-accent;
-            margin-right: 21px;
-
-            // &:hover {
-            //     background-color: $pre-accent;
-            // }
-
-            // &:focus {
-            //     background-color: #BFB6FC;
-            // }
-
-            // &:active {
-            //     background-color: #bbbbbb;
-            // }
-        }
-
-        &--favorites {
-            padding: 0 43px;
-            background-color: $prime;
-            border-radius: 50px 0 0 50px;
-
-            &:hover {
-                background-color: $pre-accent;
-            }
-
-            &:focus {
-                background-color: #BFB6FC;
-            }
-
-            &:active {
-                background-color: #bbbbbb;
-            }
-        }
-
-        &--cart {
-            padding: 0 43px;
-            margin-right: 21px;
-            background-color: $prime;
-            border-radius: 0 50px 50px 0;
-
-            &:hover {
-                background-color: $pre-accent;
-            }
-
-            &:focus {
-                background-color: #BFB6FC;
-            }
-
-            &:active {
-                background-color: #bbbbbb;
-            }
-        }
-
-        &--menu {
-            background-color: $accent;
-
-            &:hover {
-                background-color: $pre-accent;
-            }
-
-            &:focus {
-                background-color: #BFB6FC;
-            }
-
-            &:active {
-                background-color: #bbbbbb;
-            }
+    .icon {
+        &:hover {
+            background-color: #F79E87;
         }
     }
+
+    &--search {
+        background-color: $pre-accent;
+        margin-right: 21px;
+    }
+
+    &--favorites {
+        padding: 0 43px;
+        border-radius: 50px 0 0 50px;
+        background-color: $prime;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 9px;
+            width: 1px;
+            height: 33px;
+            background-color: #FDE7D3;
+        }
+    }
+
+    &--cart {
+        padding: 0 43px;
+        margin-right: 21px;
+        border-radius: 0 50px 50px 0;
+        background-color: $prime;
+    }
+
+    &--menu {
+        background-color: $accent;
+    }
+
+
 
     &__num {
         position: absolute;

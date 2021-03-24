@@ -9,7 +9,6 @@ $span: #414141;
 $subtitle: #243F4D;
 $text: #436372;
 
-
 @mixin rubik($weight) {
   font-family: 'Rubik', sans-serif;
   font-weight: $weight;
@@ -17,6 +16,11 @@ $text: #436372;
 
 @mixin dmsans($weight) {
   font-family: 'DMSans', sans-serif;
+  font-weight: $weight;
+}
+
+@mixin poppins($weight) {
+  font-family: 'Poppins', sans-serif;
   font-weight: $weight;
 }
 

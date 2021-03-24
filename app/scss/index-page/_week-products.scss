@@ -1,3 +1,22 @@
 .week-products {
     padding: 67px 0 0;
+
+    .icon {
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.22);
+        &:not(:last-child){
+            margin-right: 17px;
+        }
+
+        &:hover {
+            background-color: $accent;
+        }
+
+        &:focus {
+            background-color: #BFB6FC;
+        }
+
+        &:active {
+            background-color: #bbbbbb;
+        }
+    }
 }

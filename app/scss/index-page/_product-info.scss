@@ -39,20 +39,7 @@
             left: 0;
             top: 50%;
             transform: translateY(-70%);
-            width: 51px;
-            height: 54px;
-        }
-
-        &--support::before {
-            background-image: url('../images/icons/support.svg');
-        }
-
-        &--delivery::before {
-            background-image: url('../images/icons/delivery.svg');
-        }
-
-        &--payment::before {
-            background-image: url('../images/icons/payment.svg');
+            
         }
     }
 

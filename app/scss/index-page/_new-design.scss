@@ -1,3 +1,41 @@
-.new-design{
+.new-design {
     padding: 94px 0 84px;
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-30%);
+
+        &--1 {
+            right: -77px;
+            top: 53%;
+        }
+
+        &--2 {
+            right: -43px;
+            top: 53%;
+        }
+
+        &--3 {
+            right: 57px;
+            top: 39%;
+        }
+
+        &--4 {
+            right: -40px;
+            top: 48%;
+        }
+
+        &--5 {
+            right: 31px;
+            top: 36%;
+
+        }
+
+        &--6 {
+            top: 56%;
+            right: -147px;
+
+        }
+    }
 }
