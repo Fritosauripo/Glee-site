@@ -4,7 +4,7 @@ $(function(){
     dots: true,
   });
 
-  $('.product-sponsors__inner').slick({
+  $('.sponsors__inner').slick({
     arrows: false,
     dots: false
   });
