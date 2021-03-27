@@ -9,6 +9,12 @@ $span: #414141;
 $subtitle: #243F4D;
 $text: #436372;
 
+$screen-xs: 0;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
 @mixin rubik($weight) {
   font-family: 'Rubik', sans-serif;
   font-weight: $weight;
@@ -24,7 +30,7 @@ $text: #436372;
   font-weight: $weight;
 }
 
-%background{
+%background {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -30,15 +30,18 @@
         border-bottom: 1px solid transparent;
         transition: border-color 0.3s ease;
 
-        &:hover,
-        &:focus,
-        &:active {
+        &:hover {
             border-color: $text;
         }
 
-        // Сделать разные стили для hover, focus...
-    }
+        &:active {
+            border-color: $span;
+        }
 
+        &:focus {
+            border-color: $prime;
+        }
+    }
 }
 
 .user-bar {
