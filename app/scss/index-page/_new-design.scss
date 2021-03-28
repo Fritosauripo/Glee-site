@@ -1,6 +1,22 @@
 .new-design {
     padding: 94px 0 84px;
 
+    &__title {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__list {
+        margin-bottom: 75px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: flex-start;
+        margin-right: -30px;
+        flex-wrap: wrap;
+    }
+
     &__img {
         position: absolute;
         top: 50%;

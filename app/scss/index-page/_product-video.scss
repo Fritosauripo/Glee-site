@@ -1,8 +1,12 @@
 .product-video {
+    display: block;
     position: relative;
     background-position: center 79%;
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 500px; 
     cursor: pointer;
+    transition: filter 0.3s ease;
 
     &::before {
         content: '';
@@ -14,5 +18,9 @@
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
+    }
+
+    &:hover{
+        filter: brightness(0.7);
     }
 }

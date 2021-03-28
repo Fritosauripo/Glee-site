@@ -4,12 +4,16 @@ $(function(){
     dots: true,
   });
 
-  $('.sponsors__inner').slick({
+  $('.sponsors__list').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     arrows: false,
     dots: false
   });
 
-  var mixer = mixitup('.filter__content', {
+  var mixer = mixitup('.week-products__content', {
 
     "animation": {
       "duration": 250,
@@ -20,16 +24,7 @@ $(function(){
   });
 
   $('.product-video').magnificPopup({
-    items: [
-      {
-        src: 'https://www.youtube.com/watch?v=wk22xOm1TNo',
-        title: 'Peter & Paul fortress in SPB'
-      },
-    ],
-    gallery: {
-      enabled: true
-    },
-    type: 'iframe' // this is a default type
+    type: 'iframe',
 });
 
   $(window).scroll(function () {

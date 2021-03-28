@@ -53,34 +53,40 @@
         </ul>
 
         <div class="user-bar">
-          <button class="icon icon--search user-bar--search" type="button">
+
+          <button class="icon icon--bar user-bar__bar" type="button">
+            <span class="visually-hidden">
+              open-menu button
+            </span>
+          </button>
+
+          <button class="icon icon--search user-bar__search" type="button">
             <span class="visually-hidden">
               Search
             </span>
           </button>
 
-          <button class="icon icon--favorites user-bar--favorites" type="button">
+          <button class="icon icon--favorites user-bar__favorites" type="button">
             <span class="visually-hidden">
               Favorite
             </span>
             <span class="user-bar__num">0</span>
           </button>
 
-          <button class="icon icon--cart user-bar--cart" type="button">
+          <button class="icon icon--cart user-bar__cart" type="button">
             <span class="visually-hidden">
               Cart
             </span>
             <span class="user-bar__num">0</span>
           </button>
 
-          <button class="icon icon--menu user-bar--menu" type="button">
+          <button class="icon icon--menu user-bar__menu" type="button">
             <span class="visually-hidden">
               Menu
             </span>
           </button>
         </div>
       </nav>
-    </div>
     </div>
   </header>
 
@@ -90,6 +96,9 @@
     </h1>
 
     <section class="product-ad">
+      <h2 class="visually-hidden">
+        Product Recommendations
+      </h2>
       <div class="container">
         <ul class="product-ad__list">
 
@@ -165,15 +174,15 @@
       </div>
     </section>
 
-    <section class="product-info">
+    <div class="product-provide">
       <div class="container">
-        <ul class="product-info__list">
-          <li class="product-info__item">
-            <div class="product-info__wrapper icon--support">
+        <ul class="product-provide__list">
+          <li class="product-provide__item">
+            <div class="product-provide__wrapper product-provide__wrapper--support">
               <span>
                 Support 24/7
               </span>
-              <div class="product-info__text">
+              <div class="product-provide__text">
                 <p>
                   Contact us 24 hours a day,
                   7 days a week.
@@ -182,12 +191,12 @@
             </div>
           </li>
 
-          <li class="product-info__item">
-            <div class="product-info__wrapper icon--delivery">
+          <li class="product-provide__item">
+            <div class="product-provide__wrapper product-provide__wrapper--delivery">
               <span>
                 Delivery
               </span>
-              <div class="product-info__text">
+              <div class="product-provide__text">
                 <p>
                   Free shipping on all US order.
                 </p>
@@ -195,12 +204,12 @@
             </div>
           </li>
 
-          <li class="product-info__item">
-            <div class="product-info__wrapper icon--payment">
+          <li class="product-provide__item">
+            <div class="product-provide__wrapper product-provide__wrapper--payment">
               <span>
                 100% Payment secure
               </span>
-              <div class="product-info__text">
+              <div class="product-provide__text">
                 <p>
                   We ensure secure payment
                   with PEV.
@@ -211,515 +220,549 @@
           </li>
         </ul>
       </div>
-    </section>
+    </div>
 
-    <article class="week-products filter">
+    <section class="week-products">
 
       <div class="container container--small">
-        <h2 class="title filter__title">
+        <h2 class="title week-products__title">
           Product of the week
         </h2>
 
-        <ul class="filter__list">
-          <li class="filter__item">
-            <button class="filter__button" type="button" data-filter="all">
+        <ul class="filter-list week-products__list">
+          <li class="filter-list__item">
+            <button class="filter-list__button" type="button" data-filter="all">
               All
             </button>
           </li>
-          <li class="filter__item">
-            <button class="filter__button" type="button" data-filter=".category-furnitures">
+          <li class="filter-list__item">
+            <button class="filter-list__button" type="button" data-filter=".category-furnitures">
               Furnitures
             </button>
           </li>
-          <li class="filter__item">
-            <button class="filter__button" type="button" data-filter=".category-chairs">
+          <li class="filter-list__item">
+            <button class="filter-list__button" type="button" data-filter=".category-chairs">
               Chairs
             </button>
           </li>
-          <li class="filter__item">
-            <button class="filter__button" type="button" data-filter=".category-lighting">
+          <li class="filter-list__item">
+            <button class="filter-list__button" type="button" data-filter=".category-lighting">
               Lighting
             </button>
           </li>
-          <li class="filter__item">
-            <button class="filter__button" type="button" data-filter=".category-decor">
+          <li class="filter-list__item">
+            <button class="filter-list__button" type="button" data-filter=".category-decor">
               Decor
             </button>
           </li>
         </ul>
 
-        <ul class="filter__content filter__content--bottom">
+        <ul class="week-products__content week-products__content--bottom">
+          <li class="mix category-furnitures">
+            <article class="weeks-card">
+              <div class="weeks-card__img">
+                <img src="images/top-filter/1.png" alt="Wooden radio">
+              </div>
 
-          <li class="card card--white mix category-furnitures">
-            <div class="card__img card__img--white">
-              <img src="images/top-filter/1.png" alt="Wooden radio">
-            </div>
-
-            <div class="card__info card__info--white">
-              <span class="card__name card__name--white">
-                Wooden radio
-              </span>
-
-              <span class="card__price">
-                <sup>$</sup>
-                29.00
-              </span>
-            </div>
-            <div class="filter__bar">
-              <a class="icon icon--search" href="#">
-                <span class="visually-hidden">
-                  Search
+              <div class="weeks-card__info">
+                <span class="weeks-card__name">
+                  Wooden radio
                 </span>
-              </a>
 
-              <button class="icon icon--cart" type="button">
-                <span class="visually-hidden">
-                  Cart
+                <span class="weeks-card__price">
+                  <sup>$</sup>
+                  29.00
                 </span>
-              </button>
+              </div>
+              <div class="weeks-card__bar">
+                <a class="icon icon--search" href="#">
+                  <span class="visually-hidden">
+                    Search
+                  </span>
+                </a>
 
-              <button class="icon icon--favorites" type="button">
-                <span class="visually-hidden">
-                  Favorite
-                </span>
-              </button>
-            </div>
+                <button class="icon icon--cart" type="button">
+                  <span class="visually-hidden">
+                    Cart
+                  </span>
+                </button>
+
+                <button class="icon icon--favorites" type="button">
+                  <span class="visually-hidden">
+                    Favorite
+                  </span>
+                </button>
+              </div>
+            </article>
           </li>
 
-          <li class="card card--white mix category-chairs">
-            <div class="card__img card__img--white">
-              <img src="images/top-filter/2.png" alt="Wooden radio">
-            </div>
+          <li class=" mix category-chairs">
+            <article class="weeks-card">
+              <div class="weeks-card__img">
+                <img src="images/top-filter/2.png" alt="Wooden radio">
+              </div>
 
-            <div class="card__info card__info--white">
-              <span class="card__name card__name--white">
-                Wooden chair
-              </span>
-
-              <span class="card__price">
-                <sup>$</sup>
-                29.00
-              </span>
-            </div>
-            <div class="filter__bar">
-              <a href="#" class="icon icon--search">
-                <span class="visually-hidden">
-                  Search
+              <div class="weeks-card__info">
+                <span class="weeks-card__name">
+                  Wooden chair
                 </span>
-              </a>
 
-              <button class="icon icon--cart" type="button">
-                <span class="visually-hidden">
-                  Cart
+                <span class="weeks-card__price">
+                  <sup>$</sup>
+                  29.00
                 </span>
-              </button>
+              </div>
+              <div class="weeks-card__bar">
+                <a href="#" class="icon icon--search">
+                  <span class="visually-hidden">
+                    Search
+                  </span>
+                </a>
 
-              <button class="icon icon--favorites" type="button">
-                <span class="visually-hidden">
-                  Favorite
-                </span>
-              </button>
-            </div>
+                <button class="icon icon--cart" type="button">
+                  <span class="visually-hidden">
+                    Cart
+                  </span>
+                </button>
+
+                <button class="icon icon--favorites" type="button">
+                  <span class="visually-hidden">
+                    Favorite
+                  </span>
+                </button>
+              </div>
+            </article>
           </li>
 
-          <li class="card card--white mix category-chairs">
-            <div class="card__img card__img--white">
-              <img src="images/top-filter/3.png" alt="Wooden radio">
-            </div>
+          <li class="mix category-chairs">
+            <article class="weeks-card">
+              <div class="weeks-card__img">
+                <img src="images/top-filter/3.png" alt="Wooden radio">
+              </div>
 
-            <div class="card__info card__info--white">
-              <span class="card__name card__name--white">
-                White chair
-              </span>
-
-              <span class="card__price">
-                <sup>$</sup>
-                29.00
-              </span>
-            </div>
-            <div class="filter__bar">
-              <a href="#" class="icon icon--search">
-                <span class="visually-hidden">
-                  Search
+              <div class="weeks-card__info">
+                <span class="weeks-card__name">
+                  White chair
                 </span>
-              </a>
 
-              <button class="icon icon--cart" type="button">
-                <span class="visually-hidden">
-                  Cart
+                <span class="weeks-card__price">
+                  <sup>$</sup>
+                  29.00
                 </span>
-              </button>
+              </div>
+              <div class="weeks-card__bar">
+                <a href="#" class="icon icon--search">
+                  <span class="visually-hidden">
+                    Search
+                  </span>
+                </a>
 
-              <button class="icon icon--favorites" type="button">
-                <span class="visually-hidden">
-                  Favorite
-                </span>
-              </button>
-            </div>
+                <button class="icon icon--cart" type="button">
+                  <span class="visually-hidden">
+                    Cart
+                  </span>
+                </button>
+
+                <button class="icon icon--favorites" type="button">
+                  <span class="visually-hidden">
+                    Favorite
+                  </span>
+                </button>
+              </div>
+            </article>
           </li>
 
-          <li class="card card--white mix category-furnitures">
-            <div class="card__img card__img--white">
-              <img src="images/top-filter/4.png" alt="Wooden radio">
-            </div>
+          <li class="mix category-furnitures">
+            <article class="weeks-card">
+              <div class="weeks-card__img">
+                <img src="images/top-filter/4.png" alt="Wooden radio">
+              </div>
 
-            <div class="card__info card__info--white">
-              <span class="card__name card__name--white">
-                Retro table
-              </span>
-
-              <span class="card__price">
-                <sup>$</sup>
-                29.00
-              </span>
-            </div>
-            <div class="filter__bar">
-              <a href="#" class="icon icon--search">
-                <span class="visually-hidden">
-                  Search
+              <div class="weeks-card__info">
+                <span class="weeks-card__name">
+                  Retro table
                 </span>
-              </a>
 
-              <button class="icon icon--cart" type="button">
-                <span class="visually-hidden">
-                  Cart
+                <span class="weeks-card__price">
+                  <sup>$</sup>
+                  29.00
                 </span>
-              </button>
+              </div>
+              <div class="weeks-card__bar">
+                <a href="#" class="icon icon--search">
+                  <span class="visually-hidden">
+                    Search
+                  </span>
+                </a>
 
-              <button class="icon icon--favorites" type="button">
-                <span class="visually-hidden">
-                  Favorite
-                </span>
-              </button>
-            </div>
+                <button class="icon icon--cart" type="button">
+                  <span class="visually-hidden">
+                    Cart
+                  </span>
+                </button>
+
+                <button class="icon icon--favorites" type="button">
+                  <span class="visually-hidden">
+                    Favorite
+                  </span>
+                </button>
+              </div>
+            </article>
           </li>
 
-          <li class="card card--white mix category-furnitures">
-            <div class="card__img card__img--white">
-              <img src="images/top-filter/5.png" alt="Wooden radio">
-            </div>
+          <li class="mix category-furnitures">
+            <article class="weeks-card">
+              <div class="weeks-card__img">
+                <img src="images/top-filter/5.png" alt="Wooden radio">
+              </div>
 
-            <div class="card__info card__info--white">
-              <span class="card__name card__name--white">
-                Wooden radio
-              </span>
-
-              <span class="card__price">
-                <sup>$</sup>
-                29.00
-              </span>
-            </div>
-            <div class="filter__bar">
-              <a href="#" class="icon icon--search">
-                <span class="visually-hidden">
-                  Search
+              <div class="weeks-card__info">
+                <span class="weeks-card__name">
+                  Wooden radio
                 </span>
-              </a>
 
-              <button class="icon icon--cart" type="button">
-                <span class="visually-hidden">
-                  Cart
+                <span class="weeks-card__price">
+                  <sup>$</sup>
+                  29.00
                 </span>
-              </button>
+              </div>
+              <div class="weeks-card__bar">
+                <a href="#" class="icon icon--search">
+                  <span class="visually-hidden">
+                    Search
+                  </span>
+                </a>
 
-              <button class="icon icon--favorites" type="button">
-                <span class="visually-hidden">
-                  Favorite
-                </span>
-              </button>
-            </div>
+                <button class="icon icon--cart" type="button">
+                  <span class="visually-hidden">
+                    Cart
+                  </span>
+                </button>
+
+                <button class="icon icon--favorites" type="button">
+                  <span class="visually-hidden">
+                    Favorite
+                  </span>
+                </button>
+              </div>
+            </article>
           </li>
 
-          <li class="card card--white mix category-furnitures">
-            <div class="card__img card__img--white">
-              <img src="images/top-filter/6.png" alt="Wooden radio">
-            </div>
+          <li class="mix category-furnitures">
+            <article class="weeks-card">
+              <div class="weeks-card__img">
+                <img src="images/top-filter/6.png" alt="Wooden radio">
+              </div>
 
-            <div class="card__info card__info--white">
-              <span class="card__name card__name--white">
-                Wooden chair
-              </span>
-
-              <span class="card__price">
-                <sup>$</sup>
-                29.00
-              </span>
-            </div>
-            <div class="filter__bar">
-              <a href="#" class="icon icon--search">
-                <span class="visually-hidden">
-                  Search
+              <div class="weeks-card__info">
+                <span class="weeks-card__name">
+                  Wooden chair
                 </span>
-              </a>
 
-              <button class="icon icon--cart" type="button">
-                <span class="visually-hidden">
-                  Cart
+                <span class="weeks-card__price">
+                  <sup>$</sup>
+                  29.00
                 </span>
-              </button>
+              </div>
+              <div class="weeks-card__bar">
+                <a href="#" class="icon icon--search">
+                  <span class="visually-hidden">
+                    Search
+                  </span>
+                </a>
 
-              <button class="icon icon--favorites" type="button">
-                <span class="visually-hidden">
-                  Favorite
-                </span>
-              </button>
-            </div>
+                <button class="icon icon--cart" type="button">
+                  <span class="visually-hidden">
+                    Cart
+                  </span>
+                </button>
+
+                <button class="icon icon--favorites" type="button">
+                  <span class="visually-hidden">
+                    Favorite
+                  </span>
+                </button>
+              </div>
+            </article>
           </li>
 
-          <li class="card card--white mix category-chairs">
-            <div class="card__img card__img--white">
-              <img src="images/top-filter/7.png" alt="Wooden radio">
-            </div>
+          <li class="mix category-chairs">
+            <article class="weeks-card">
+              <div class="weeks-card__img">
+                <img src="images/top-filter/7.png" alt="Wooden radio">
+              </div>
 
-            <div class="card__info card__info--white">
-              <span class="card__name card__name--white">
-                White chiair
-              </span>
-
-              <span class="card__price">
-                <sup>$</sup>
-                29.00
-              </span>
-            </div>
-            <div class="filter__bar">
-              <a href="#" class="icon icon--search">
-                <span class="visually-hidden">
-                  Search
+              <div class="weeks-card__info">
+                <span class="weeks-card__name">
+                  White chiair
                 </span>
-              </a>
 
-              <button class="icon icon--cart" type="button">
-                <span class="visually-hidden">
-                  Cart
+                <span class="weeks-card__price">
+                  <sup>$</sup>
+                  29.00
                 </span>
-              </button>
+              </div>
+              <div class="weeks-card__bar">
+                <a href="#" class="icon icon--search">
+                  <span class="visually-hidden">
+                    Search
+                  </span>
+                </a>
 
-              <button class="icon icon--favorites" type="button">
-                <span class="visually-hidden">
-                  Favorite
-                </span>
-              </button>
-            </div>
+                <button class="icon icon--cart" type="button">
+                  <span class="visually-hidden">
+                    Cart
+                  </span>
+                </button>
+
+                <button class="icon icon--favorites" type="button">
+                  <span class="visually-hidden">
+                    Favorite
+                  </span>
+                </button>
+              </div>
+            </article>
           </li>
 
-          <li class="card card--white mix category-furnitures">
-            <div class="card__img card__img--white">
-              <img src="images/top-filter/8.png" alt="Wooden radio">
-            </div>
+          <li class="mix category-furnitures">
+            <article class="weeks-card">
+              <div class="weeks-card__img">
+                <img src="images/top-filter/8.png" alt="Wooden radio">
+              </div>
 
-            <div class="card__info card__info--white">
-              <span class="card__name card__name--white">
-                Retro table
-              </span>
-
-              <span class="card__price">
-                <sup>$</sup>
-                29.00
-              </span>
-            </div>
-            <div class="filter__bar">
-              <a href="#" class="icon icon--search">
-                <span class="visually-hidden">
-                  Search
+              <div class="weeks-card__info">
+                <span class="weeks-card__name">
+                  Retro table
                 </span>
-              </a>
 
-              <button class="icon icon--cart" type="button">
-                <span class="visually-hidden">
-                  Cart
+                <span class="weeks-card__price">
+                  <sup>$</sup>
+                  29.00
                 </span>
-              </button>
+              </div>
+              <div class="weeks-card__bar">
+                <a href="#" class="icon icon--search">
+                  <span class="visually-hidden">
+                    Search
+                  </span>
+                </a>
 
-              <button class="icon icon--favorites" type="button">
-                <span class="visually-hidden">
-                  Favorite
-                </span>
-              </button>
-            </div>
+                <button class="icon icon--cart" type="button">
+                  <span class="visually-hidden">
+                    Cart
+                  </span>
+                </button>
+
+                <button class="icon icon--favorites" type="button">
+                  <span class="visually-hidden">
+                    Favorite
+                  </span>
+                </button>
+              </div>
+            </article>
           </li>
         </ul>
       </div>
 
       <div class="container">
-        <ul class="filter__content">
+        <ul class="week-products__content">
 
-          <li class="card card--orange mix category-lighting">
-            <div class="card__img card__img--orange">
+          <li class="top-card mix category-lighting">
+            <div class="top-card__img">
               <img src="images/top-filter/9.png" alt="Mirum Notare Tellus">
             </div>
 
-            <div class="card__info card__info--orange">
-              <span class="card__name card__name--orange">
+            <div class="top-card__info">
+              <span class="top-card__name">
                 Mirum Notare Tellus
               </span>
 
-              <div class="card__description card__description--orange">
+              <div class="top-card__description card__description--orange">
                 <p>
                   LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
                 </p>
               </div>
 
-              <button class="btn card__btn">
+              <a class="btn top-card__btn">
                 View More
-              </button>
+              </a>
             </div>
           </li>
 
-          <li class="card card--orange mix category-lighting">
-            <div class="card__img card__img--orange">
-              <img src="images/top-filter/10.png" alt="">
+          <li class="top-card mix category-lighting">
+            <div class="top-card__img">
+              <img src="images/top-filter/10.png" alt="Malesuada Tempor
+              Euismod">
             </div>
 
-            <div class="card__info card__info--orange">
-              <span class="card__name card__name--orange">
+            <div class="top-card__info">
+              <span class="top-card__name">
                 Malesuada Tempor
                 Euismod
               </span>
 
-              <div class="card__description card__description--orange">
+              <div class="top-card__description">
                 <p>
                   50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
                 </p>
               </div>
 
-              <button class="btn card__btn">
+              <a class="btn top-card__btn">
                 View More
-              </button>
+              </a>
             </div>
           </li>
 
         </ul>
       </div>
 
-    </article>
+    </section>
 
-    <article class="new-design filter">
+    <section class="new-design">
       <div class="container container--small">
-        <h2 class="title filter__title">
+        <h2 class="title new-design__title">
           New Design
         </h2>
 
-        <ul class="filter__list">
-          <li class="filter__item">
-            <button class="filter__button" type="button" data-filter="all">
+        <ul class="filter-list new-design__list">
+          <li class="filter-list__item">
+            <button class="filter-list__button" type="button" data-filter="all">
               All
             </button>
           </li>
-          <li class="filter__item">
-            <button class="filter__button" type="button" data-filter=".category-furnitures">
+          <li class="filter-list__item">
+            <button class="filter-list__button" type="button" data-filter=".category-furnitures">
               Furnitures
             </button>
           </li>
-          <li class="filter__item">
-            <button class="filter__button" type="button" data-filter=".category-chairs">
+          <li class="filter-list__item">
+            <button class="filter-list__button" type="button" data-filter=".category-chairs">
               Chairs
             </button>
           </li>
-          <li class="filter__item">
-            <button class="filter__button" type="button" data-filter=".category-lighting">
+          <li class="filter-list__item">
+            <button class="filter-list__button" type="button" data-filter=".category-lighting">
               Lighting
             </button>
           </li>
-          <li class="filter__item">
-            <button class="filter__button" type="button" data-filter=".category-decor">
+          <li class="filter-list__item">
+            <button class="filter-list__button" type="button" data-filter=".category-decor">
               Decor
             </button>
           </li>
         </ul>
 
-        <ul class="filter__content">
-          <li class="card card--gray">
-            <div class="card__info--gray">
-              <span class="card__name card__name--gray">
-                Beat Flat Pendant
-                Black
-              </span>
-              <span class="card__description card__description--gray">
-                Classic
-              </span>
-            </div>
-            <div class="new-design__img new-design__img--1">
-              <img src="images/new-design/1.png" alt="furnitures">
-            </div>
+        <ul class="new-design__content">
+          <li class="mix category-furnitures">
+            <article class="design-card">
+              <div class="design-card__info">
+                <span class="design-card__name">
+                  Beat Flat Pendant
+                  Black
+                </span>
+                <span class="design-card__description">
+                  Classic
+                </span>
+              </div>
+              <div class="new-design__img new-design__img--1">
+                <img src="images/new-design/1.png" alt="furnitures">
+              </div>
+            </article>
           </li>
-          <li class="card card--gray">
-            <div class="card__info--gray">
-              <span class="card__name card__name--gray">
-                Lampe Sur Pieds
-                Bamboo
-              </span>
-              <span class="card__description card__description--gray">
-                Classic
-              </span>
-            </div>
-            <div class="new-design__img new-design__img--2">
-              <img src="images/new-design/2.png" alt="furnitures">
-            </div>
+
+          <li class="mix category-furnitures">
+            <article class="design-card">
+              <div class="design-card__info">
+                <span class="design-card__name">
+                  Lampe Sur Pieds
+                  Bamboo
+                </span>
+                <span class="design-card__description">
+                  Classic
+                </span>
+              </div>
+              <div class="new-design__img new-design__img--2">
+                <img src="images/new-design/2.png" alt="furnitures">
+              </div>
+            </article>
           </li>
-          <li class="card card--gray">
-            <div class="card__info--gray">
-              <span class="card__name card__name--gray">
-                Rattan Rocking
-                Chair
-              </span>
-              <span class="card__description card__description--gray">
-                Classic
-              </span>
-            </div>
-            <div class="new-design__img new-design__img--3">
-              <img src="images/new-design/3.png" alt="furnitures">
-            </div>
+
+          <li class="mix category-furnitures">
+            <article class="design-card">
+              <div class="design-card__info">
+                <span class="design-card__name">
+                  Rattan Rocking
+                  Chair
+                </span>
+                <span class="design-card__description">
+                  Classic
+                </span>
+              </div>
+              <div class="new-design__img new-design__img--3">
+                <img src="images/new-design/3.png" alt="furnitures">
+              </div>
+            </article>
           </li>
-          <li class="card card--gray">
-            <div class="card__info--gray">
-              <span class="card__name card__name--gray">
-                Rattan Rocking
-                Chair
-              </span>
-              <span class="card__description card__description--gray">
-                Classic
-              </span>
-            </div>
-            <div class="new-design__img new-design__img--4">
-              <img src="images/new-design/4.png" alt="furnitures">
-            </div>
+
+          <li class="mix category-furnitures">
+            <article class="design-card">
+              <div class="design-card__info">
+                <span class="design-card__name">
+                  Rattan Rocking
+                  Chair
+                </span>
+                <span class="design-card__description">
+                  Classic
+                </span>
+              </div>
+              <div class="new-design__img new-design__img--4">
+                <img src="images/new-design/4.png" alt="furnitures">
+              </div>
+            </article>
           </li>
-          <li class="card card--gray">
-            <div class="card__info--gray">
-              <span class="card__name card__name--gray">
-                Rattan Rocking
-                Chair
-              </span>
-              <span class="card__description card__description--gray">
-                Classic
-              </span>
-            </div>
-            <div class="new-design__img new-design__img--5">
-              <img src="images/new-design/5.png" alt="furnitures">
-            </div>
+
+          <li class="mix category-furnitures">
+            <article class="design-card">
+              <div class="design-card__info">
+                <span class="design-card__name">
+                  Rattan Rocking
+                  Chair
+                </span>
+                <span class="design-card__description">
+                  Classic
+                </span>
+              </div>
+              <div class="new-design__img new-design__img--5">
+                <img src="images/new-design/5.png" alt="furnitures">
+              </div>
+            </article>
           </li>
-          <li class="card card--gray">
-            <div class="card__info--gray">
-              <span class="card__name card__name--gray">
-                Lampe Sur Pieds
-                Bamboo
-              </span>
-              <span class="card__description card__description--gray">
-                Classic
-              </span>
-            </div>
-            <div class="new-design__img new-design__img--6">
-              <img src="images/new-design/6.png" alt="furnitures">
-            </div>
+
+          <li class="mix category-furnitures">
+            <article class="design-card">
+              <div class="design-card__info">
+                <span class="design-card__name">
+                  Lampe Sur Pieds
+                  Bamboo
+                </span>
+                <span class="design-card__description">
+                  Classic
+                </span>
+              </div>
+              <div class="new-design__img new-design__img--6">
+                <img src="images/new-design/6.png" alt="furnitures">
+              </div>
+            </article>
           </li>
         </ul>
       </div>
-    </article>
 
-    <section class="product-video video" style="background-image: url(images/product-video/video-bg.jpg);">
-      <span class="visually-hidden">
-        Click here to play video
-      </span>
+      <a class="product-video" style="background-image: url(images/product-video/video-bg.jpg);"
+        href="https://www.youtube.com/watch?v=wk22xOm1TNo">
+        <span class="visually-hidden">
+          Click here to play video
+        </span>
+      </a>
     </section>
 
     <section class="product-blog">
@@ -735,146 +778,151 @@
         </div>
 
         <ul class="product-blog__cards">
-          <li class="product-blog__card card">
-            <div class="product-blog__img">
-              <img src="images/product-blog/1.jpg" alt="New room">
-            </div>
+          <li class="product-blog__item">
+            <article class="blog-card">
+              <a class="blog-card__img" href="#">
+                <img src="images/product-blog/1.jpg" alt="New room">
+              </a>
 
-            <div class="product-blog__content">
-              <div class="product-blog__text">
-                <p>
-                  Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                </p>
-              </div>
+              <div class="blog-card__content">
 
-              <div class="product-blog__info">
-                <div class="product-blog__date">
-                  <span>
-                    28 january, 2020
-                  </span>
+                <a href="#" class="blog-card__button">
+                  News
+                </a>
+
+                <a class="blog-card__text" href="#">
+                  <p>
+                    Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                  </p>
+                </a>
+
+                <div class="blog-card__info">
+                  <div class="blog-card__date">
+                    <span>
+                      28 january, 2020
+                    </span>
+                  </div>
+
+                  <a class="blog-card__author" href="#">
+                    <span>
+                      By Admin
+                    </span>
+                  </a>
                 </div>
-
-                <span class="product-blog__author">
-                  By Admin
-                </span>
               </div>
-            </div>
+            </article>
           </li>
 
-          <li class="product-blog__card card">
-            <div class="product-blog__img">
-              <img src="images/product-blog/2.jpg" alt="New room">
-            </div>
+          <li class="product-blog__item">
+            <article class="blog-card">
+              <a class="blog-card__img" href="#">
+                <img src="images/product-blog/2.jpg" alt="New room">
+              </a>
 
-            <div class="product-blog__content">
-              <div class="product-blog__text">
-                <p>
-                  Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                </p>
-              </div>
+              <div class="blog-card__content">
 
-              <div class="product-blog__info">
-                <div class="product-blog__date">
-                  <span>
-                    28 january, 2020
-                  </span>
+                <a href="#" class="blog-card__button">
+                  News
+                </a>
+
+                <a class="blog-card__text" href="#">
+                  <p>
+                    Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  </p>
+                </a>
+
+                <div class="blog-card__info">
+                  <div class="blog-card__date">
+                    <span>
+                      28 january, 2020
+                    </span>
+                  </div>
+
+                  <a class="blog-card__author" href="#">
+                    <span>
+                      By Admin
+                    </span>
+                  </a>
                 </div>
-
-                <span class="product-blog__author">
-                  By Admin
-                </span>
               </div>
-            </div>
+            </article>
           </li>
 
-          <li class="product-blog__card card">
-            <div class="product-blog__img">
-              <img src="images/product-blog/3.jpg" alt="New room">
-            </div>
+          <li class="ptoduct-blog__item">
+            <article class="blog-card">
+              <a class="blog-card__img" href="#">
+                <img src="images/product-blog/3.jpg" alt="New room">
+              </a>
 
-            <div class="product-blog__content">
-              <div class="product-blog__text">
-                <p>
-                  Rncididunt ut labore et dolore magna aliqua. Ut enim 
-                </p>
-              </div>
+              <div class="blog-card__content">
 
-              <div class="product-blog__info">
-                <div class="product-blog__date">
-                  <span>
-                    28 january, 2020
-                  </span>
+                <a href="#" class="blog-card__button">
+                  News
+                </a>
+
+                <a class="blog-card__text" href="#">
+                  <p>
+                    Rncididunt ut labore et dolore magna aliqua. Ut enim
+                  </p>
+                </a>
+
+                <div class="blog-card__info">
+                  <div class="blog-card__date">
+                    <span>
+                      28 january, 2020
+                    </span>
+                  </div>
+
+                  <a class="blog-card__author" href="#">
+                    <span>
+                      By Admin
+                    </span>
+                  </a>
                 </div>
-
-                <span class="product-blog__author">
-                  By Admin
-                </span>
               </div>
-            </div>
+            </article>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="sponsors">
+    <div class="sponsors">
       <div class="container container--small">
-        <div class="sponsors__inner">
-          <ul class="sponsors__list">
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/1.png" alt="">
-            </li>
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/2.png" alt="">
-            </li>
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/3.png" alt="">
-            </li>
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/4.png" alt="">
-            </li>
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/5.png" alt="">
-            </li>
-          </ul>   
+        <ul class="sponsors__list">
+          <li class="sponsors__item">
+            <img src="images/product-sponsors/1.png" width="82" height="84" alt="Peterson Stephanie">
+          </li>
+          <li class="sponsors__item">
+            <img src="images/product-sponsors/2.png" width="151" height="48" alt="KMN consulting">
+          </li>
+          <li class="sponsors__item">
+            <img src="images/product-sponsors/3.png" width="150" height="77" alt="Chainforce">
+          </li>
+          <li class="sponsors__item">
+            <img src="images/product-sponsors/4.png" width="167" height="52" alt="Nextg3n">
+          </li>
+          <li class="sponsors__item">
+            <img src="images/product-sponsors/5.png" width="87" height="66" alt="The Vintage">
+          </li>
 
-          <ul class="sponsors__list">
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/1.png" alt="">
-            </li>
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/2.png" alt="">
-            </li>
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/3.png" alt="">
-            </li>
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/4.png" alt="">
-            </li>
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/5.png" alt="">
-            </li>
-          </ul>   
-
-          <ul class="sponsors__list">
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/1.png" alt="">
-            </li>
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/2.png" alt="">
-            </li>
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/3.png" alt="">
-            </li>
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/4.png" alt="">
-            </li>
-            <li class="sponsors__item">
-              <img src="images/product-sponsors/5.png" alt="">
-            </li>
-          </ul>   
-        </div>
+          <li class="sponsors__item">
+            <img src="images/product-sponsors/1.png" width="82" height="84" alt="Peterson Stephanie">
+          </li>
+          <li class="sponsors__item">
+            <img src="images/product-sponsors/2.png" width="151" height="48" alt="KMN consulting">
+          </li>
+          <li class="sponsors__item">
+            <img src="images/product-sponsors/3.png" width="150" height="77" alt="Chainforce">
+          </li>
+          <li class="sponsors__item">
+            <img src="images/product-sponsors/4.png" width="167" height="52" alt="Nextg3n">
+          </li>
+          <li class="sponsors__item">
+            <img src="images/product-sponsors/5.png" width="87" height="66" alt="The Vintage">
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="footer">
@@ -993,7 +1041,7 @@
               <span class="visually-hidden">
                 Enter your email here
               </span>
-              <input class="footer__input" type="email" name="email" placeholder="Email address" required>
+              <input class="footer__input" type="email" id="email" placeholder="Email address" required>
             </label>
             <button class="footer__button" type="submit">
               Subscribe
@@ -1035,7 +1083,6 @@
         </div>
       </div>
     </div>
-    </а>
   </footer>
   <script src="js/main.min.js"></script>
 </body>

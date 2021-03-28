@@ -1,9 +1,10 @@
 .sponsors{
    background-color: $subprime;
-   padding: 94px 0 89px;
-    &__list{
-        display: flex!important;
-        justify-content: space-around;
-        align-items: center;
+   padding: 94px 0 86px;
+
+    &__item{
+        img{
+            object-fit: cover;
+        }
     }
 }

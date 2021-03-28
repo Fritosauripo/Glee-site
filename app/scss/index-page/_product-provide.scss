@@ -1,4 +1,4 @@
-.product-info {
+.product-provide {
     &__list {
         display: flex;
         width: 100%;
@@ -9,8 +9,6 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        min-height: 170px;
-        // Попробовать при помощи отступов 
         padding: 47px 150px;
         background-color: $subprime;
 
@@ -21,6 +19,7 @@
         span {
             display: block;
             @include dmsans(700);
+            @include t-clamp();
             font-size: 18px;
             line-height: 2.2;
             color: $span;
@@ -39,15 +38,42 @@
             left: 0;
             top: 50%;
             transform: translateY(-70%);
-            
+        }
+
+        &--support {
+            &::before {
+                width: 51px;
+                height: 54px;
+                background-image: url('../images/icons/support.svg');
+            }
+        }
+
+        &--delivery {
+            &::before {
+                width: 54px;
+                height: 37px;
+                background-image: url('../images/icons/delivery.svg');
+            }
+        }
+
+        &--payment {
+            &::before {
+                width: 54px;
+                height: 53px;
+                background-image: url('../images/icons/payment.svg');
+            }
         }
     }
 
     &__text {
-        @include dmsans(400);
-        color: #585858;
-        font-size: 16px;
-        line-height: 1.2;
+
+        p {
+            @include dmsans(400);
+            @include t-clamp();
+            color: #585858;
+            font-size: 16px;
+            line-height: 1.2;
+        }
     }
 
 }

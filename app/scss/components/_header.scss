@@ -1,7 +1,7 @@
 .header {
     position: fixed;
     width: 100%;
-    padding: 48px 0 45px;
+    padding: 20px;
     background-color: #ffffff;
     box-shadow: transparent;
     transition: box-shadow 0.3s ease;
@@ -15,6 +15,10 @@
 
     &__list {
         display: flex;
+
+        @media(max-width: $screen-lg){
+            display: none;
+        }
     }
 
     &__item:not(:last-child) {
@@ -53,12 +57,22 @@
         }
     }
 
-    &--search {
+    &__bar{
+        display: none;
+        background-color: $accent;
+        margin-right: 21px;
+
+        @media(max-width: $screen-lg){
+            display: block;
+        }
+     }
+
+    &__search {
         background-color: $pre-accent;
         margin-right: 21px;
     }
 
-    &--favorites {
+    &__favorites {
         padding: 0 43px;
         border-radius: 50px 0 0 50px;
         background-color: $prime;
@@ -74,14 +88,14 @@
         }
     }
 
-    &--cart {
+    &__cart {
         padding: 0 43px;
         margin-right: 21px;
         border-radius: 0 50px 50px 0;
         background-color: $prime;
     }
 
-    &--menu {
+    &__menu {
         background-color: $accent;
     }
 

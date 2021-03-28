@@ -10,9 +10,9 @@ $subtitle: #243F4D;
 $text: #436372;
 
 $screen-xs: 0;
-$screen-sm: 480px;
+$screen-sm: 414px;
 $screen-md: 768px;
-$screen-lg: 992px;
+$screen-lg: 998px;
 $screen-xl: 1200px;
 
 @mixin rubik($weight) {
@@ -28,6 +28,17 @@ $screen-xl: 1200px;
 @mixin poppins($weight) {
   font-family: 'Poppins', sans-serif;
   font-weight: $weight;
+}
+
+@mixin t-clamp($lines: 3, $line-height: false) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+
+  @if $line-height {
+      max-height: $line-height * $lines * 1px;
+  }
 }
 
 %background {
