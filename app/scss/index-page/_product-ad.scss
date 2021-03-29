@@ -1,12 +1,20 @@
 .product-ad {
     padding-top: 90px;
 
+    @include r(820){
+        padding-top: 70px;
+    }
+
     &__inner {
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 820px;
         background-color: $prime;
+
+        @include r(1080){
+            min-height: 55vh;
+        }
     }
 
     &__content {
@@ -14,11 +22,19 @@
         width: 100%;
         margin-bottom: 65px;
         margin-right: 100px;
-        padding: 60px 0;
+        padding: 60px 20px;
+
+        @include r(1420) {
+            margin-right: 0;
+        }
+
+        @include r(1080){
+            margin-bottom: 0;
+            padding: 20px 20px;
+        }
     }
 
     &__title {
-
         p {
             @include rubik(500);
             @include t-clamp();
@@ -26,6 +42,14 @@
             text-transform: uppercase;
             font-size: 72px;
             line-height: 1;
+
+            @include r(1080) {
+                font-size: 50px;
+            }
+
+            @include r(640){
+                font-size: 45px;
+            }
         }
     }
 
@@ -33,9 +57,6 @@
         max-width: 356px;
         margin-bottom: 15px;
         padding: 20px 0;
-    }
-
-    &__text {
 
         p {
             @include rubik(400);
@@ -43,6 +64,19 @@
             color: $text;
             font-size: 18px;
             line-height: 2;
+
+            @include r(1080) {
+                font-size: 15px;
+            }
+        }
+
+        @include r(820){
+            padding: 10px 0;
+            margin-bottom: 0;
+        }
+
+        @include r(640){
+            padding: 10px 0;
         }
     }
 
@@ -50,8 +84,11 @@
         padding: 20px 104px 23px 29px;
         color: #FFFFFF;
         background-color: $accent;
-    }
 
+        @include r(640){
+            padding: 18px 104px 18px 29px;
+        }
+    }
 
     &__goods {
         position: relative;
@@ -66,6 +103,16 @@
             border-radius: 50%;
             background-image: linear-gradient(90deg, #02002400 0%, #FFFFFF 100%);
             z-index: 0;
+
+            @include r(1420) {
+                right: 0;
+            }
+
+            @include r(1080) {
+                top: -30px;
+                width: 334px;
+                height: 334px;
+            }
         }
 
         img {
@@ -74,7 +121,16 @@
             height: 263px;
             max-width: 640px;
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
+        }
+
+        @include r(1420) {
+            padding-right: 80px;
+            margin-right: 10px;
+        }
+
+        @include r(640){
+            display: none;
         }
     }
 
@@ -84,35 +140,45 @@
         left: 50%;
         display: flex;
         transform: translateX(-50%);
+
+        li:not(:last-child) {
+            margin-right: 11px;
+        }
+
+        button {
+            width: 29px;
+            height: 29px;
+            font-size: 10px;
+            @include rubik(500);
+            outline: transparent;
+            cursor: pointer;
+            border: 0;
+            border-radius: 50%;
+            background-color: #FFFFFF9b;
+            transition: background-color 0.3s ease;
+
+            &:focus {
+                background-color: $accent;
+            }
+
+            &:hover {
+                background-color: $pre-accent;
+            }
+
+            &:active {
+                background-color: #FFFFFF;
+            }
+
+            @include r(1080){
+                display: none;
+            }
+
+        }
     }
 
-    .slick-dots li:not(:last-child) {
-        margin-right: 11px;
-    }
-
-    .slick-dots button {
-        width: 29px;
-        height: 29px;
-        font-size: 10px;
-        @include rubik(500);
-        outline: transparent;
-        cursor: pointer;
-        border: 0;
-        border-radius: 50%;
-        background-color: #FFFFFF9b;
-        transition: background-color 0.3s ease;
-
-        &:hover,
-        &:active {
+    .slick-active {
+        button {
             background-color: #FFFFFF;
         }
-
-        &:focus {
-            background-color: $accent;
-        }
-    }
-
-    .slick-active button {
-        background-color: #FFFFFF;
     }
 }

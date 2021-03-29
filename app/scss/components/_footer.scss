@@ -8,6 +8,11 @@
         display: flex;
         padding-bottom: 66px;
         border-bottom: 1px solid #DAE4E9;
+
+        @include r(1250) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     }
 
     &__item {
@@ -15,6 +20,14 @@
 
         &:not(:last-child) {
             margin-right: 30px;
+
+            @include r(1250) {
+                margin: 10px;
+            }
+        }
+
+        @include r(1250) {
+            margin: 10px;
         }
     }
 
@@ -25,7 +38,6 @@
 
     &__info {
         max-width: 192px;
-        font-style: normal;
         font-size: 14px;
         line-height: 2;
 
@@ -36,10 +48,17 @@
         a {
             transition: color 0.3s ease;
 
-            &:hover,
-            &:focus,
-            &:active {
+
+            &:focus {
+                color: #BFB6FC;
+            }
+
+            &:hover {
                 color: $subtitle;
+            }
+
+            &:active {
+                color: #bbbbbb;
             }
         }
     }
@@ -62,10 +81,16 @@
             line-height: 2.3;
             transition: color 0.3s ease;
 
-            &:hover,
-            &:focus,
-            &:active {
+            &:focus {
+                color: #BFB6FC;
+            }
+
+            &:hover {
                 color: $subtitle;
+            }
+
+            &:active {
+                color: #bbbbbb;
             }
         }
     }
@@ -79,11 +104,14 @@
         background-color: $subprime;
         transition: background-color 0.3s ease;
 
+        &:focus {
+            background-color: #BFB6FC;
+        }
+
         &:hover {
             background-color: $prime;
         }
 
-        &:focus,
         &:active {
             background-color: $pre-accent;
         }
@@ -112,19 +140,21 @@
         font-size: 14px;
         line-height: 1.5;
         color: #FFFFFF;
-        cursor: pointer;
         border: 0;
         border-radius: 0;
         background-color: $accent;
         transition: background-color 0.3s ease;
 
-        &:hover {
-            background-color: $text;
+        &:focus {
+            background-color: #BFB6FC;
         }
 
-        &:focus,
-        &:active {
+        &:hover {
             background-color: $subtitle;
+        }
+
+        &:active {
+            background-color: #bbbbbb;
         }
     }
 
@@ -135,21 +165,31 @@
     &__inner {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
+        padding: 0 10px;
+
+        &-text {
+            p {
+                @include rubik(400);
+                font-size: 14px;
+            }
+        }
     }
 
     &__menu {
-        display: flex;
-
-        &-item {
-            padding: 0 12px;
+        @include r(440) {
+            display: none;
         }
+    }
 
-        &-item:not(:last-child) {
+    &__menu-item {
+        padding: 0 12px;
+
+        &:not(:last-child) {
             border-right: 1px solid #7B7B7B;
         }
 
-        &-item:last-child {
+        &:last-child {
             padding-right: 0;
         }
     }
@@ -157,16 +197,16 @@
     &__link {
         transition: color 0.3s ease;
 
+        &:focus {
+            color: $prime;
+        }
+
         &:hover {
             color: $subtitle;
         }
 
         &:active {
             color: #234969;
-        }
-
-        &:focus {
-            color: $prime;
         }
     }
 }

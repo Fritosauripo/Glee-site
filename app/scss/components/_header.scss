@@ -2,10 +2,14 @@
     position: fixed;
     width: 100%;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     box-shadow: transparent;
     transition: box-shadow 0.3s ease;
     z-index: 1;
+
+    @include r(820){
+     padding: 10px;       
+    }
 }
 
 .menu {
@@ -13,16 +17,45 @@
     align-items: center;
     justify-content: space-between;
 
+
     &__list {
         display: flex;
 
-        @media(max-width: $screen-lg){
-            display: none;
+        @include r(1080) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-evenly;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -600px;
+            min-height: 240px;
+            height: 40vh;
+            background-color: #FFFFFF;
+            width: 100%;
+            z-index: -1;
+            transition: top 0.3s ease;
+        }
+
+        &--active {
+            top: 68px;
         }
     }
 
-    &__item:not(:last-child) {
-        margin-right: 34px;
+    &__item {
+
+        @include r(1080) {
+            padding: 8px 0;
+        }
+
+        &:not(:last-child) {
+            margin-right: 34px;
+
+            @include r(1080) {
+                margin-right: 0;
+            }
+        }
     }
 
     &__link {
@@ -34,16 +67,16 @@
         border-bottom: 1px solid transparent;
         transition: border-color 0.3s ease;
 
+        &:focus {
+            border-color: $prime;
+        }
+
         &:hover {
             border-color: $text;
         }
 
         &:active {
             border-color: $span;
-        }
-
-        &:focus {
-            border-color: $prime;
         }
     }
 }
@@ -57,19 +90,32 @@
         }
     }
 
-    &__bar{
+    &__bar {
         display: none;
         background-color: $accent;
         margin-right: 21px;
 
-        @media(max-width: $screen-lg){
+        @include r(1080) {
             display: block;
         }
-     }
+
+        @include r(440) {
+            margin-right: 0;
+            ;
+        }
+    }
 
     &__search {
         background-color: $pre-accent;
         margin-right: 21px;
+
+        @include r(640) {
+            margin-right: 0;
+        }
+
+        @include r(440) {
+            display: none;
+        }
     }
 
     &__favorites {
@@ -86,6 +132,10 @@
             height: 33px;
             background-color: #FDE7D3;
         }
+
+        @include r(640) {
+            display: none;
+        }
     }
 
     &__cart {
@@ -93,13 +143,19 @@
         margin-right: 21px;
         border-radius: 0 50px 50px 0;
         background-color: $prime;
+
+        @include r(640) {
+            display: none;
+        }
     }
 
     &__menu {
         background-color: $accent;
+
+        @include r(640) {
+            display: none;
+        }
     }
-
-
 
     &__num {
         position: absolute;

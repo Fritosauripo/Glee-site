@@ -5,7 +5,7 @@ $(function(){
   });
 
   $('.sponsors__list').slick({
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -33,5 +33,9 @@ $(function(){
     } else {
       $('.header').css('box-shadow', '0px 4px 8px 0px rgba(0, 0, 0, 0)');
     }
+  });
+
+  $('.user-bar__bar').on('click', function () {
+    $('.menu__list').toggleClass('menu__list--active');
   });
 })

@@ -9,11 +9,19 @@ $span: #414141;
 $subtitle: #243F4D;
 $text: #436372;
 
-$screen-xs: 0;
-$screen-sm: 414px;
-$screen-md: 768px;
-$screen-lg: 998px;
-$screen-xl: 1200px;
+@mixin r ($width) {
+  @media only screen and (max-width: $width + 'px') {
+    @content;
+  }
+}
+
+// 360х640, 1366х768, 1920х1080, 768х1024
+
+@mixin rm($width) {
+  @media only screen and (min-width: $width + 'px') {
+    @content;
+  }
+}
 
 @mixin rubik($weight) {
   font-family: 'Rubik', sans-serif;
@@ -37,7 +45,7 @@ $screen-xl: 1200px;
   -webkit-line-clamp: $lines;
 
   @if $line-height {
-      max-height: $line-height * $lines * 1px;
+    max-height: $line-height * $lines * 1px;
   }
 }
 

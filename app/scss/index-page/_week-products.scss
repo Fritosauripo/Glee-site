@@ -10,14 +10,49 @@
         margin-bottom: 75px;
     }
 
+    &__weeks-card {
+        margin-bottom: 40px;
+        margin-right: 30px;
+
+        @include r(1250) {
+            margin: 0 10px 0 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__top-card {
+        justify-content: center;
+        margin-right: 30px;
+
+        @include r(1440){
+            margin-right: 0;
+        }
+    }
+
     &__content {
         display: flex;
         justify-content: flex-start;
         margin-right: -30px;
         flex-wrap: wrap;
 
-        &--bottom{
+        @include r(1250) {
+            justify-content: center;
+            margin-right: 0;
+        }
+
+        &--bottom {
             margin-bottom: 146px;
+        }
+
+        &--popular {
+            justify-content: center;
+            margin-right: 0;
+
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 130px;
+                }
+            }
         }
     }
 
@@ -28,12 +63,12 @@
             margin-right: 17px;
         }
 
-        &:hover {
-            background-color: $accent;
-        }
-
         &:focus {
             background-color: #BFB6FC;
+        }
+
+        &:hover {
+            background-color: $accent;
         }
 
         &:active {
