@@ -55,6 +55,17 @@ $(function () {
     }
   });
 
+  var mixer = mixitup('.new-design__content', {
+
+    "animation": {
+      "duration": 250,
+      "nudge": true,
+      "reverseOut": false,
+      "effects": "fade translateZ(-100px)"
+    }
+  });
+
+
   $('.product-video').magnificPopup({
     type: 'iframe',
   });
