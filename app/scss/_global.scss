@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  max-width: 1740px;
+  max-width: 1770px;
   margin: 0 auto;
 
   &--small {
@@ -30,7 +30,7 @@ body {
   font-size: 38px;
   line-height: 1.2;
 
-  @include r(820){
+  @include r(820) {
     font-size: 30px;
   }
 }
@@ -234,10 +234,19 @@ body {
   font-size: 16px;
   background-color: #FEEFE2;
   width: 870px;
-  height: 389px;
+  min-height: 389px;
   padding-left: 246px;
   justify-content: center;
   align-items: center;
+
+  @include r(820) {
+    min-height: 210px;
+    padding: 10px 0 10px 200px;
+  }
+
+  @include r(640) {
+    padding-left: 0;
+  }
 
   &__img {
     display: block;
@@ -247,6 +256,14 @@ body {
       position: absolute;
       left: 140px;
       top: -100px;
+
+      @include r(1250) {
+        left: 10px;
+      }
+    }
+
+    @include r(640) {
+      display: none;
     }
   }
 
@@ -255,6 +272,7 @@ body {
     text-align: start;
     align-items: flex-start;
     color: $subtitle;
+    padding: 0 10px;
   }
 
   &__name {
@@ -262,14 +280,23 @@ body {
     line-height: 1.2;
     @include dmsans(700);
     margin-bottom: 13px;
+
+    @include r(440) {
+      font-size: 20px;
+    }
   }
 
   &__description {
+    margin-bottom: 25px;
+
     p {
       @include rubik(400);
       font-size: 16px;
       line-height: 2;
-      margin-bottom: 25px;
+
+      @include r(440) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -344,7 +371,7 @@ body {
 
     img {
       border-radius: 10px 10px 0 0;
-      height: 250px;
+      height: inherit;
       width: 100%;
       object-fit: cover;
       transform: scale(1);
@@ -353,6 +380,10 @@ body {
       &:hover {
         transform: scale(1.1);
       }
+    }
+
+    @include r(820) {
+      height: 100px;
     }
   }
 

@@ -1,16 +1,48 @@
-$(function(){
+$(function () {
   $('.product-ad__list').slick({
     arrows: false,
     dots: true,
+
+    responsive: [
+      {
+        breakpoint: 1080,
+        settings: {
+          dots: false
+        }
+      },
+
+    ]
   });
 
   $('.sponsors__list').slick({
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 10000,
     arrows: false,
-    dots: false
+    dots: false,
+    
+
+    responsive: [
+      {
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 820,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 440,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
   var mixer = mixitup('.week-products__content', {
@@ -25,7 +57,7 @@ $(function(){
 
   $('.product-video').magnificPopup({
     type: 'iframe',
-});
+  });
 
   $(window).scroll(function () {
     if ($(window).scrollTop() > 400) {

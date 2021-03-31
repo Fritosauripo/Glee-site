@@ -1,6 +1,10 @@
 .week-products {
     padding: 67px 0 0;
 
+    @include r(820){
+        padding: 20px 0 0;
+    }
+
     &__title {
         text-align: center;
         margin-bottom: 24px;
@@ -8,6 +12,10 @@
 
     &__list {
         margin-bottom: 75px;
+
+        @include r(820){
+            margin-bottom: 25px;
+        }
     }
 
     &__weeks-card {
@@ -21,12 +29,8 @@
     }
 
     &__top-card {
-        justify-content: center;
-        margin-right: 30px;
-
-        @include r(1440){
-            margin-right: 0;
-        }
+        margin-right: 0;
+        width: 100%;
     }
 
     &__content {
@@ -34,23 +38,37 @@
         justify-content: flex-start;
         margin-right: -30px;
         flex-wrap: wrap;
+        margin-bottom: 146px;
 
         @include r(1250) {
             justify-content: center;
             margin-right: 0;
         }
 
-        &--bottom {
-            margin-bottom: 146px;
+        @include r(820){
+            margin-bottom: 0;
         }
 
         &--popular {
+            margin-bottom: 0;
             justify-content: center;
             margin-right: 0;
 
             li {
+                max-width: 870px;
+                width: 100%;
+
                 &:not(:last-child) {
+                    margin-right: 30px;
                     margin-bottom: 130px;
+
+                    @include r(1250) {
+                        margin-right: 0;
+                    }
+
+                    @include r(640){
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }

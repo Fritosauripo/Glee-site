@@ -1,7 +1,7 @@
 .product-ad {
     padding-top: 90px;
 
-    @include r(820){
+    @include r(820) {
         padding-top: 70px;
     }
 
@@ -12,7 +12,7 @@
         min-height: 820px;
         background-color: $prime;
 
-        @include r(1080){
+        @include r(1080) {
             min-height: 55vh;
         }
     }
@@ -28,7 +28,7 @@
             margin-right: 0;
         }
 
-        @include r(1080){
+        @include r(1080) {
             margin-bottom: 0;
             padding: 20px 20px;
         }
@@ -47,7 +47,7 @@
                 font-size: 50px;
             }
 
-            @include r(640){
+            @include r(640) {
                 font-size: 45px;
             }
         }
@@ -70,12 +70,12 @@
             }
         }
 
-        @include r(820){
+        @include r(820) {
             padding: 10px 0;
             margin-bottom: 0;
         }
 
-        @include r(640){
+        @include r(640) {
             padding: 10px 0;
         }
     }
@@ -85,7 +85,7 @@
         color: #FFFFFF;
         background-color: $accent;
 
-        @include r(640){
+        @include r(640) {
             padding: 18px 104px 18px 29px;
         }
     }
@@ -129,7 +129,7 @@
             margin-right: 10px;
         }
 
-        @include r(640){
+        @include r(640) {
             display: none;
         }
     }
@@ -168,11 +168,6 @@
             &:active {
                 background-color: #FFFFFF;
             }
-
-            @include r(1080){
-                display: none;
-            }
-
         }
     }
 

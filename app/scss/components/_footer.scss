@@ -4,6 +4,10 @@
     color: #7B7B7B;
     outline: transparent;
 
+    @include r(820){
+        padding: 20px 0 0;
+    }
+
     &__top {
         display: flex;
         padding-bottom: 66px;
