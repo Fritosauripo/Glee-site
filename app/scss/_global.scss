@@ -1,5 +1,8 @@
 body {
   background-color: #FFFFFF;
+  @include dmsans(500);
+  color: #000000;
+  font-size: 16px;
 }
 
 .visually-hidden {
@@ -154,7 +157,6 @@ body {
     background-color: transparent;
     @include dmsans(700);
     color: #8B8B8B;
-    font-size: 16px;
     outline: transparent;
     transition: color 0.3s ease;
 
@@ -175,13 +177,11 @@ body {
 .card {
   display: flex;
   position: relative;
-  font-size: 16px;
 }
 
 .weeks-card {
   display: flex;
   position: relative;
-  font-size: 16px;
   width: 270px;
   height: 380px;
   box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
@@ -213,7 +213,6 @@ body {
 
   &__name {
     padding: 36px 0 6px;
-    @include dmsans(500);
     color: $subtitle;
   }
 
@@ -231,7 +230,6 @@ body {
 .top-card {
   display: flex;
   position: relative;
-  font-size: 16px;
   background-color: #FEEFE2;
   width: 870px;
   min-height: 389px;
@@ -291,7 +289,6 @@ body {
 
     p {
       @include rubik(400);
-      font-size: 16px;
       line-height: 2;
 
       @include r(440) {
@@ -339,7 +336,6 @@ body {
   }
 
   &__description {
-    font-size: 16px;
     @include dmsans(700);
     line-height: 2.2;
     color: $accent;
@@ -436,7 +432,6 @@ body {
 
     p {
       @include t-clamp();
-      @include dmsans(500);
       font-size: 18px;
       transition: color 0.3s ease;
 

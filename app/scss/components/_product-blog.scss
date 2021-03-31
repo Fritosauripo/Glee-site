@@ -42,7 +42,6 @@
 
     &__link {
         position: relative;
-        font-size: 16px;
         @include dmsans(700);
         padding-right: 25px;
         transition: color 0.3s ease;
@@ -53,7 +52,6 @@
             right: 0;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 16px;
             color: #000000;
         }
 
