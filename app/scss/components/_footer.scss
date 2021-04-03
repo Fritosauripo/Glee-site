@@ -4,7 +4,7 @@
     color: #7B7B7B;
     outline: transparent;
 
-    @include r(820){
+    @include r(820) {
         padding: 20px 0 0;
     }
 
@@ -15,7 +15,7 @@
 
         @include r(1250) {
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-between;
         }
     }
 
@@ -170,12 +170,13 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 10px;
+    }
 
-        &-text {
-            p {
-                @include rubik(400);
-                font-size: 14px;
-            }
+    &__copy {
+        p {
+            @include rubik(400);
+            @include t-clamp(1, false);
+            font-size: 14px;
         }
     }
 
@@ -213,8 +214,8 @@
         }
     }
 
-    &__items{
-        a{
+    &__element {
+        a {
             outline: transparent;
         }
     }

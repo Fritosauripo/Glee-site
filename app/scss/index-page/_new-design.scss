@@ -1,8 +1,9 @@
 .new-design {
     padding: 94px 0 84px;
 
-    @include r(820){
-        padding: 20px 0 0px;
+    @include r(820) {
+        padding: 40px 0 0;
+        ;
     }
 
     &__title {
@@ -12,11 +13,18 @@
 
     &__list {
         margin-bottom: 75px;
+
+        @include r(820) {
+            margin-bottom: 25px;
+        }
     }
 
-    &__design-card{
-        margin: 0 10px 0 10px;
-        margin-bottom: 20px;
+    &__card {
+        margin: 0 30px 35px 0;
+
+        @include r(820) {
+            margin: 0 10px 20px 10px;
+        }
     }
 
     &__content {
@@ -24,8 +32,9 @@
         justify-content: flex-start;
         margin-right: -30px;
         flex-wrap: wrap;
+        margin-bottom: 82px;
 
-        @include r(1250){
+        @include r(1250) {
             margin-right: 0;
             justify-content: center;
         }
@@ -35,6 +44,15 @@
         position: absolute;
         top: 50%;
         transform: translateY(-30%);
+        max-width: 417px;
+
+        @include r(820) {
+            transform: translate(32%, -13%);
+        }
+
+        @include r(440) {
+            transform: translate(10%, -2%);
+        }
 
         &--1 {
             right: -77px;
@@ -66,10 +84,6 @@
             top: 56%;
             right: -147px;
 
-        }
-
-        @include r(440){
-            transform: translate(10%, 5%);
         }
     }
 }

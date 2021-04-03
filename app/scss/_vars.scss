@@ -38,7 +38,7 @@ $text: #436372;
   font-weight: $weight;
 }
 
-@mixin t-clamp($lines: 3, $line-height: false) {
+@mixin t-clamp($lines, $line-height) {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;

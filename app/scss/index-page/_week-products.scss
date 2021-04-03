@@ -2,7 +2,7 @@
     padding: 67px 0 0;
 
     @include r(820){
-        padding: 20px 0 0;
+        padding: 40px 0 0;
     }
 
     &__title {
@@ -18,7 +18,7 @@
         }
     }
 
-    &__weeks-card {
+    &__card {
         margin-bottom: 40px;
         margin-right: 30px;
 
@@ -45,10 +45,6 @@
             margin-right: 0;
         }
 
-        @include r(820){
-            margin-bottom: 0;
-        }
-
         &--popular {
             margin-bottom: 0;
             justify-content: center;
@@ -60,10 +56,11 @@
 
                 &:not(:last-child) {
                     margin-right: 30px;
-                    margin-bottom: 130px;
 
-                    @include r(1250) {
+                    @include r(1774)  {
+                        /*Использовано только один раз*/
                         margin-right: 0;
+                        margin-bottom: 130px;
                     }
 
                     @include r(640){

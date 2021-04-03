@@ -52,6 +52,9 @@ $(function () {
       "nudge": true,
       "reverseOut": false,
       "effects": "fade translateZ(-100px)"
+    },
+    selectors: {
+      control: '.js-filter-week'
     }
   });
 
@@ -62,6 +65,9 @@ $(function () {
       "nudge": true,
       "reverseOut": false,
       "effects": "fade translateZ(-100px)"
+    },
+    selectors: {
+      control: '.js-filter-design'
     }
   });
 
@@ -72,13 +78,17 @@ $(function () {
 
   $(window).scroll(function () {
     if ($(window).scrollTop() > 400) {
-      $('.header').css('box-shadow', '0px 4px 8px 0px rgba(0, 0, 0, 0.22)');
+      $('.header').toggleClass('header--top');
     } else {
-      $('.header').css('box-shadow', '0px 4px 8px 0px rgba(0, 0, 0, 0)');
+      $('.header').removeClass('header--top');
     }
   });
 
   $('.user-bar__bar').on('click', function () {
     $('.menu__list').toggleClass('menu__list--active');
+  });
+
+  $('.user-bar__arrow').on('click', function () {
+    $('.user-bar__wrapper').toggleClass('user-bar__wrapper--active');
   });
 })

@@ -1,14 +1,20 @@
 .header {
     position: fixed;
     width: 100%;
-    padding: 20px;
+    padding: 48px 0 46px;
+
     background-color: #FFFFFF;
     box-shadow: transparent;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s, padding 0.3s ease;
     z-index: 1;
 
-    @include r(820){
-     padding: 10px;       
+    @include r(820) {
+        padding: 10px;
+    }
+
+    &--top {
+        padding: 10px;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.22);
     }
 }
 
@@ -85,8 +91,26 @@
     display: flex;
 
     .icon {
+
         &:hover {
             background-color: #F79E87;
+        }
+    }
+
+
+    &__wrapper {
+        display: flex;
+
+        @include r(640) {
+            flex-direction: column;
+            position: absolute;
+            right: 31px;
+            top: -250px;
+            transition: top 0.3s ease;
+        }
+
+        &--active{
+            top: 73px;
         }
     }
 
@@ -98,10 +122,15 @@
         @include r(1080) {
             display: block;
         }
+    }
 
-        @include r(440) {
-            margin-right: 0;
-            ;
+    &__arrow {
+        background-color: $accent;
+        display: none;
+        margin-right: 21px;
+
+        @include r(640){
+            display: block;
         }
     }
 
@@ -111,17 +140,23 @@
 
         @include r(640) {
             margin-right: 0;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
         }
 
-        @include r(440) {
-            display: none;
-        }
     }
 
     &__favorites {
         padding: 0 43px;
         border-radius: 50px 0 0 50px;
         background-color: $prime;
+
+        @include r (640) {
+            border-radius: 50%;
+            padding: 0;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
+        }
 
         &::after {
             content: '';
@@ -131,10 +166,10 @@
             width: 1px;
             height: 33px;
             background-color: #FDE7D3;
-        }
 
-        @include r(640) {
-            display: none;
+            @include r (640) {
+                width: 0;
+            }
         }
     }
 
@@ -144,22 +179,31 @@
         border-radius: 0 50px 50px 0;
         background-color: $prime;
 
-        @include r(640) {
-            display: none;
+        @include r (640) {
+            border-radius: 50%;
+            padding: 0;
+            margin-right: 0;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
         }
     }
 
     &__menu {
         background-color: $accent;
 
-        @include r(640) {
-            display: none;
+        @include r(640){
+            box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.28);
+        }
+
+        svg {
+            fill: #FFFFFF;
         }
     }
 
     &__num {
         position: absolute;
         top: 10px;
+        right: 25px;
         width: 16px;
         height: 16px;
         @include dmsans(400);

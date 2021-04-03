@@ -1,5 +1,5 @@
 .product-ad {
-    padding-top: 90px;
+    padding-top: 144px;
 
     @include r(820) {
         padding-top: 70px;
@@ -18,13 +18,13 @@
     }
 
     &__content {
-        max-width: 431px;
+        max-width: 429px;
         width: 100%;
         margin-bottom: 65px;
         margin-right: 100px;
-        padding: 60px 20px;
+        padding: 60px 0;
 
-        @include r(1420) {
+        @include r(1440) {
             margin-right: 0;
         }
 
@@ -37,7 +37,7 @@
     &__title {
         p {
             @include rubik(500);
-            @include t-clamp();
+            @include t-clamp(3, false);
             color: $subtitle;
             text-transform: uppercase;
             font-size: 72px;
@@ -48,7 +48,7 @@
             }
 
             @include r(640) {
-                font-size: 45px;
+                font-size: 30px;
             }
         }
     }
@@ -60,13 +60,13 @@
 
         p {
             @include rubik(400);
-            @include t-clamp();
+            @include t-clamp(3, false);
             color: $text;
             font-size: 18px;
             line-height: 2;
 
             @include r(1080) {
-                font-size: 15px;
+                font-size: 14px;
             }
         }
 
@@ -86,12 +86,34 @@
         background-color: $accent;
 
         @include r(640) {
-            padding: 18px 104px 18px 29px;
+            font-size: 14px;
+            padding: 15px 50px 15px 15px;
+        }
+
+        @include r(440) {
+            padding: 10px 43px 10px 5px;
+        }
+
+        svg {
+            fill: #FFFFFF;
         }
     }
 
     &__goods {
         position: relative;
+
+        @include r(1440) {
+            padding-right: 80px;
+            margin-right: 10px;
+        }
+
+        @include r(820) {
+            padding-right: 0;
+        }
+
+        @include r(640) {
+            // display: none;
+        }
 
         &::after {
             content: '';
@@ -104,14 +126,32 @@
             background-image: linear-gradient(90deg, #02002400 0%, #FFFFFF 100%);
             z-index: 0;
 
-            @include r(1420) {
-                right: 0;
+            @include r(1440) {
+                right: 50px;
             }
 
             @include r(1080) {
                 top: -30px;
                 width: 334px;
                 height: 334px;
+            }
+
+            @include r(820) {
+                right: 0;
+            }
+
+            @include r(640) {
+                width: 234px;
+                height: 234px;
+                right: 25px;
+                top: 20px;
+            }
+
+            @include r(440) {
+                right: 0;
+                top: 64px;
+                width: 134px;
+                height: 134px;
             }
         }
 
@@ -122,15 +162,6 @@
             max-width: 640px;
             width: 100%;
             object-fit: contain;
-        }
-
-        @include r(1420) {
-            padding-right: 80px;
-            margin-right: 10px;
-        }
-
-        @include r(640) {
-            display: none;
         }
     }
 
