@@ -12,14 +12,14 @@
         justify-content: space-between;
         align-items: flex-end;
         margin-bottom: 45px;
+
+        @include r(1250){
+            padding: 0 10px;
+        }
     }
 
     &__title {
         padding-right: 10px;
-
-        @include r(640) {
-            max-width: 200px;
-        }
     }
 
     &__cards {

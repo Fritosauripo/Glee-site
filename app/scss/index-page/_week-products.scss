@@ -45,6 +45,10 @@
             margin-right: 0;
         }
 
+        @include r(820){
+            margin-bottom: 30px;
+        }
+
         &--popular {
             margin-bottom: 0;
             justify-content: center;
@@ -63,7 +67,7 @@
                         margin-bottom: 130px;
                     }
 
-                    @include r(640){
+                    @include r(820){
                         margin-bottom: 20px;
                     }
                 }

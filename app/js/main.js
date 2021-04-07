@@ -78,11 +78,12 @@ $(function () {
 
   $(window).scroll(function () {
     if ($(window).scrollTop() > 400) {
-      $('.header').toggleClass('header--top');
+      $('.header').addClass('header--top');
     } else {
       $('.header').removeClass('header--top');
     }
   });
+
 
   $('.user-bar__bar').on('click', function () {
     $('.menu__list').toggleClass('menu__list--active');
@@ -90,5 +91,6 @@ $(function () {
 
   $('.user-bar__arrow').on('click', function () {
     $('.user-bar__wrapper').toggleClass('user-bar__wrapper--active');
+    $('.user-bar__arrow').toggleClass('user-bar__arrow--active');
   });
 })

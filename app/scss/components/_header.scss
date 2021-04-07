@@ -1,8 +1,7 @@
 .header {
     position: fixed;
     width: 100%;
-    padding: 48px 0 46px;
-
+    padding: 48px 5px 46px;
     background-color: #FFFFFF;
     box-shadow: transparent;
     transition: box-shadow 0.3s, padding 0.3s ease;
@@ -109,6 +108,10 @@
             transition: top 0.3s ease;
         }
 
+        @include r(440){
+            right: 10px;
+        }
+
         &--active{
             top: 73px;
         }
@@ -128,9 +131,22 @@
         background-color: $accent;
         display: none;
         margin-right: 21px;
+        transition: transform 0.3s, background-color 0.3s ease;
 
         @include r(640){
             display: block;
+        }
+
+        @include r(440){
+            margin-right: 0;
+        }
+
+        &--active{
+            transform: rotate(90deg);
+        }
+
+        svg{
+            fill: #FFFFFF;
         }
     }
 

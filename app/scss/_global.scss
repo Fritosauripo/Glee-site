@@ -37,6 +37,10 @@ body {
   @include r(820) {
     font-size: 30px;
   }
+
+  @include r(640){
+    font-size: 25px;
+  }
 }
 
 .icon {
@@ -200,6 +204,7 @@ body {
     @include dmsans(700);
     color: $accent;
     @include t-clamp(1, false);
+    max-width: 150px;
 
     sup {
       display: inline-block;
@@ -213,7 +218,7 @@ body {
   position: relative;
   background-color: #FEEFE2;
   width: 870px;
-  height: 389px;
+  min-height: 389px;
   padding-left: 246px;
   justify-content: center;
   align-items: center;
@@ -255,6 +260,10 @@ body {
       @include r(1250) {
         left: 10px;
       }
+
+      @include r(640){
+        height: 233px;
+      }
     }
   }
 
@@ -267,10 +276,6 @@ body {
 
     @include r(640) {
       max-width: 240px;
-    }
-
-    @include r(640){
-      max-width: 170px;
     }
   }
 
@@ -359,9 +364,8 @@ body {
 
   &__name {
     font-size: 20px;
-    @include t-clamp(1, false);
+    @include t-clamp(2, false);
     @include dmsans(700);
-    display: block;
   }
 
   &__description {

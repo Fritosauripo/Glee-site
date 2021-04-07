@@ -54,17 +54,28 @@ function scripts() {
 }
 
 function svgSprite() {
-  return src('app/images/content/sprite/*.svg')
+  return src('app/images/sprite/*.svg')
+      .pipe(sprite({
+          mode: {
+              stack: {
+                  sprite: '../sprite.svg'
+              }
+          }
+      }))
+      .pipe(dest('./build/images'))
+};
 
-    .pipe(sprite({
-      mode: {
-        stack: {
-          sprite: '../sprite.svg'
-        }
-      }
-    }))
-    .pipe(dest('./build/images/'))
-}
+function svgSprite() {
+  return src('app/images/sprite/*.svg')
+      .pipe(sprite({
+          mode: {
+              stack: {
+                  sprite: '../sprite.svg'
+              }
+          }
+      }))
+      .pipe(dest('./build/images'))
+};
 
 function html() {
   return src(['app/*.html', '!app/parts/**/*.html'])
