@@ -38,7 +38,7 @@ body {
     font-size: 30px;
   }
 
-  @include r(640){
+  @include r(640) {
     font-size: 25px;
   }
 }
@@ -261,7 +261,7 @@ body {
         left: 10px;
       }
 
-      @include r(640){
+      @include r(640) {
         height: 233px;
       }
     }
@@ -360,6 +360,7 @@ body {
   &__info {
     padding: 33px 0 0 36px;
     max-width: 208px;
+    z-index: 1;
   }
 
   &__name {
@@ -498,6 +499,7 @@ body {
   &__date {
     position: relative;
     margin-right: 21px;
+    padding-left: 18px;
 
     svg {
       position: absolute;
@@ -505,15 +507,12 @@ body {
       top: 50%;
       transform: translateY(-50%);
     }
-
-    time {
-      padding-left: 18px;
-    }
   }
 
   &__author {
     position: relative;
-    max-width: 160px;
+    padding-left: 18px;
+    max-width: 130px;
     @include t-clamp(1, false);
 
     svg {
@@ -524,7 +523,6 @@ body {
     }
 
     span {
-      padding-left: 18px;
       transition: color 0.3s ease;
 
       &:focus {
